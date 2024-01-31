@@ -1,0 +1,2540 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20233.23.1227.1336                               -->
+<workbook original-version='18.1' source-build='2023.3.1 (20233.23.1227.1336)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='game.csv+ (Multiple Connections)' inline='true' name='federated.0iyjge50u90jb41dm91vj1dw8x2m' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='game' name='textscan.158451w0tqekpx1cfgnsq012z4pb'>
+            <connection class='textscan' directory='C:/Users/lualg/Downloads/IronHack/Project/Project-3/Games-Study/data/clean' filename='game.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='languages' name='textscan.11p7vrj1pydt88107jpbb10x9njo'>
+            <connection class='textscan' directory='C:/Users/lualg/Downloads/IronHack/Project/Project-3/Games-Study/data/clean' filename='languages.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='platform' name='textscan.1y1xk4x1gkn190171ddca0sb28my'>
+            <connection class='textscan' directory='C:/Users/lualg/Downloads/IronHack/Project/Project-3/Games-Study/data/clean' filename='platform.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='playtime' name='textscan.16kei5o0qbja3f1g4skzl15ssbru'>
+            <connection class='textscan' directory='C:/Users/lualg/Downloads/IronHack/Project/Project-3/Games-Study/data/clean' filename='playtime.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='user_feedback' name='textscan.1mgf8wf1i44hxn1d9k70c0dypj24'>
+            <connection class='textscan' directory='C:/Users/lualg/Downloads/IronHack/Project/Project-3/Games-Study/data/clean' filename='user_feedback.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='metacritic' name='textscan.1m8fxpj03pc36w11jubwj0j4lttm'>
+            <connection class='textscan' directory='C:/Users/lualg/Downloads/IronHack/Project/Project-3/Games-Study/data/clean' filename='metacritic.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='development' name='textscan.1ei3p32148c3xu1gfwx561rerol2'>
+            <connection class='textscan' directory='C:/Users/lualg/Downloads/IronHack/Project/Project-3/Games-Study/data/clean' filename='development.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='categorization' name='textscan.1edl7ds14ox3zt1aepnx819ks2zl'>
+            <connection class='textscan' directory='C:/Users/lualg/Downloads/IronHack/Project/Project-3/Games-Study/data/clean' filename='categorization.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='media' name='textscan.1j17lm70x2xk7u1ej1ms31sbxiqx'>
+            <connection class='textscan' directory='C:/Users/lualg/Downloads/IronHack/Project/Project-3/Games-Study/data/clean' filename='media.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1j17lm70x2xk7u1ej1ms31sbxiqx' name='categorization.csv' table='[categorization#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_PR' separator=','>
+            <column datatype='integer' name='appid' ordinal='0' />
+            <column datatype='string' name='categories' ordinal='1' />
+            <column datatype='string' name='genres' ordinal='2' />
+            <column datatype='string' name='tags' ordinal='3' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.158451w0tqekpx1cfgnsq012z4pb' name='game.csv' table='[game#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_PR' separator=','>
+              <column datatype='integer' name='appid' ordinal='0' />
+              <column datatype='string' name='name' ordinal='1' />
+              <column datatype='date' name='release_date' ordinal='2' />
+              <column datatype='real' name='estimated_owners' ordinal='3' />
+              <column datatype='real' name='peak_ccu' ordinal='4' />
+              <column datatype='real' name='required_age' ordinal='5' />
+              <column datatype='real' name='price' ordinal='6' />
+              <column datatype='real' name='dlc_count' ordinal='7' />
+              <column datatype='string' name='about_the_game' ordinal='8' />
+              <column datatype='string' name='reviews' ordinal='9' />
+              <column datatype='string' name='header_image' ordinal='10' />
+              <column datatype='string' name='website' ordinal='11' />
+              <column datatype='string' name='support_url' ordinal='12' />
+              <column datatype='string' name='support_email' ordinal='13' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1j17lm70x2xk7u1ej1ms31sbxiqx' name='categorization.csv' table='[categorization#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_PR' separator=','>
+              <column datatype='integer' name='appid' ordinal='0' />
+              <column datatype='string' name='categories' ordinal='1' />
+              <column datatype='string' name='genres' ordinal='2' />
+              <column datatype='string' name='tags' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1j17lm70x2xk7u1ej1ms31sbxiqx' name='development.csv' table='[development#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_PR' separator=','>
+              <column datatype='integer' name='appid' ordinal='0' />
+              <column datatype='string' name='developers' ordinal='1' />
+              <column datatype='string' name='publishers' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1j17lm70x2xk7u1ej1ms31sbxiqx' name='languages.csv' table='[languages#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_PR' separator=','>
+              <column datatype='integer' name='appid' ordinal='0' />
+              <column datatype='string' name='supported_languages' ordinal='1' />
+              <column datatype='string' name='full_audio_languages' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1j17lm70x2xk7u1ej1ms31sbxiqx' name='media.csv' table='[media#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_PR' separator=','>
+              <column datatype='integer' name='appid' ordinal='0' />
+              <column datatype='string' name='screenshots' ordinal='1' />
+              <column datatype='string' name='movies' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1j17lm70x2xk7u1ej1ms31sbxiqx' name='metacritic.csv' table='[metacritic#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_PR' separator=','>
+              <column datatype='integer' name='appid' ordinal='0' />
+              <column datatype='real' name='metacritic_score' ordinal='1' />
+              <column datatype='string' name='metacritic_url' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1j17lm70x2xk7u1ej1ms31sbxiqx' name='platform.csv' table='[platform#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_PR' separator=','>
+              <column datatype='integer' name='appid' ordinal='0' />
+              <column datatype='boolean' name='windows' ordinal='1' />
+              <column datatype='boolean' name='mac' ordinal='2' />
+              <column datatype='boolean' name='linux' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1j17lm70x2xk7u1ej1ms31sbxiqx' name='playtime.csv' table='[playtime#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_PR' separator=','>
+              <column datatype='integer' name='appid' ordinal='0' />
+              <column datatype='real' name='average_playtime_forever' ordinal='1' />
+              <column datatype='real' name='average_playtime_two_weeks' ordinal='2' />
+              <column datatype='real' name='median_playtime_forever' ordinal='3' />
+              <column datatype='real' name='median_playtime_two_weeks' ordinal='4' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1j17lm70x2xk7u1ej1ms31sbxiqx' name='user_feedback.csv' table='[user_feedback#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_PR' separator=','>
+              <column datatype='integer' name='appid' ordinal='0' />
+              <column datatype='real' name='user_score' ordinal='1' />
+              <column datatype='real' name='positive' ordinal='2' />
+              <column datatype='real' name='negative' ordinal='3' />
+              <column datatype='real' name='score_rank' ordinal='4' />
+              <column datatype='real' name='achievements' ordinal='5' />
+              <column datatype='real' name='recommendations' ordinal='6' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[about_the_game]' value='[game.csv].[about_the_game]' />
+          <map key='[achievements]' value='[user_feedback.csv].[achievements]' />
+          <map key='[appid (categorization.csv)]' value='[categorization.csv].[appid]' />
+          <map key='[appid (development.csv)]' value='[development.csv].[appid]' />
+          <map key='[appid (languages.csv)]' value='[languages.csv].[appid]' />
+          <map key='[appid (media.csv)]' value='[media.csv].[appid]' />
+          <map key='[appid (metacritic.csv)]' value='[metacritic.csv].[appid]' />
+          <map key='[appid (platform.csv)]' value='[platform.csv].[appid]' />
+          <map key='[appid (playtime.csv)]' value='[playtime.csv].[appid]' />
+          <map key='[appid (user_feedback.csv)]' value='[user_feedback.csv].[appid]' />
+          <map key='[appid]' value='[game.csv].[appid]' />
+          <map key='[average_playtime_forever]' value='[playtime.csv].[average_playtime_forever]' />
+          <map key='[average_playtime_two_weeks]' value='[playtime.csv].[average_playtime_two_weeks]' />
+          <map key='[categories]' value='[categorization.csv].[categories]' />
+          <map key='[developers]' value='[development.csv].[developers]' />
+          <map key='[dlc_count]' value='[game.csv].[dlc_count]' />
+          <map key='[estimated_owners]' value='[game.csv].[estimated_owners]' />
+          <map key='[full_audio_languages]' value='[languages.csv].[full_audio_languages]' />
+          <map key='[genres]' value='[categorization.csv].[genres]' />
+          <map key='[header_image]' value='[game.csv].[header_image]' />
+          <map key='[linux]' value='[platform.csv].[linux]' />
+          <map key='[mac]' value='[platform.csv].[mac]' />
+          <map key='[median_playtime_forever]' value='[playtime.csv].[median_playtime_forever]' />
+          <map key='[median_playtime_two_weeks]' value='[playtime.csv].[median_playtime_two_weeks]' />
+          <map key='[metacritic_score]' value='[metacritic.csv].[metacritic_score]' />
+          <map key='[metacritic_url]' value='[metacritic.csv].[metacritic_url]' />
+          <map key='[movies]' value='[media.csv].[movies]' />
+          <map key='[name]' value='[game.csv].[name]' />
+          <map key='[negative]' value='[user_feedback.csv].[negative]' />
+          <map key='[peak_ccu]' value='[game.csv].[peak_ccu]' />
+          <map key='[positive]' value='[user_feedback.csv].[positive]' />
+          <map key='[price]' value='[game.csv].[price]' />
+          <map key='[publishers]' value='[development.csv].[publishers]' />
+          <map key='[recommendations]' value='[user_feedback.csv].[recommendations]' />
+          <map key='[release_date]' value='[game.csv].[release_date]' />
+          <map key='[required_age]' value='[game.csv].[required_age]' />
+          <map key='[reviews]' value='[game.csv].[reviews]' />
+          <map key='[score_rank]' value='[user_feedback.csv].[score_rank]' />
+          <map key='[screenshots]' value='[media.csv].[screenshots]' />
+          <map key='[support_email]' value='[game.csv].[support_email]' />
+          <map key='[support_url]' value='[game.csv].[support_url]' />
+          <map key='[supported_languages]' value='[languages.csv].[supported_languages]' />
+          <map key='[tags]' value='[categorization.csv].[tags]' />
+          <map key='[user_score]' value='[user_feedback.csv].[user_score]' />
+          <map key='[website]' value='[game.csv].[website]' />
+          <map key='[windows]' value='[platform.csv].[windows]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[game.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_PR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[categorization.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_PR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[development.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_PR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[languages.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_PR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[media.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_PR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[metacritic.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_PR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[platform.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_PR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[playtime.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_PR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[user_feedback.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_PR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>appid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[appid]</local-name>
+            <parent-name>[game.csv]</parent-name>
+            <remote-alias>appid</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[game.csv_474CF59A39684B7B94F048075B4F69EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[game.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[game.csv_474CF59A39684B7B94F048075B4F69EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[release_date]</local-name>
+            <parent-name>[game.csv]</parent-name>
+            <remote-alias>release_date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[game.csv_474CF59A39684B7B94F048075B4F69EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>estimated_owners</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[estimated_owners]</local-name>
+            <parent-name>[game.csv]</parent-name>
+            <remote-alias>estimated_owners</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[game.csv_474CF59A39684B7B94F048075B4F69EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>peak_ccu</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[peak_ccu]</local-name>
+            <parent-name>[game.csv]</parent-name>
+            <remote-alias>peak_ccu</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[game.csv_474CF59A39684B7B94F048075B4F69EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>required_age</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[required_age]</local-name>
+            <parent-name>[game.csv]</parent-name>
+            <remote-alias>required_age</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[game.csv_474CF59A39684B7B94F048075B4F69EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[price]</local-name>
+            <parent-name>[game.csv]</parent-name>
+            <remote-alias>price</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[game.csv_474CF59A39684B7B94F048075B4F69EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dlc_count</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[dlc_count]</local-name>
+            <parent-name>[game.csv]</parent-name>
+            <remote-alias>dlc_count</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[game.csv_474CF59A39684B7B94F048075B4F69EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>about_the_game</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[about_the_game]</local-name>
+            <parent-name>[game.csv]</parent-name>
+            <remote-alias>about_the_game</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[game.csv_474CF59A39684B7B94F048075B4F69EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>reviews</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[reviews]</local-name>
+            <parent-name>[game.csv]</parent-name>
+            <remote-alias>reviews</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[game.csv_474CF59A39684B7B94F048075B4F69EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>header_image</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[header_image]</local-name>
+            <parent-name>[game.csv]</parent-name>
+            <remote-alias>header_image</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[game.csv_474CF59A39684B7B94F048075B4F69EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>website</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[website]</local-name>
+            <parent-name>[game.csv]</parent-name>
+            <remote-alias>website</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[game.csv_474CF59A39684B7B94F048075B4F69EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>support_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[support_url]</local-name>
+            <parent-name>[game.csv]</parent-name>
+            <remote-alias>support_url</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[game.csv_474CF59A39684B7B94F048075B4F69EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>support_email</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[support_email]</local-name>
+            <parent-name>[game.csv]</parent-name>
+            <remote-alias>support_email</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[game.csv_474CF59A39684B7B94F048075B4F69EB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>appid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[appid (categorization.csv)]</local-name>
+            <parent-name>[categorization.csv]</parent-name>
+            <remote-alias>appid</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[categorization.csv_156271FDC0524742AB30503F3C32C9AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>categories</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[categories]</local-name>
+            <parent-name>[categorization.csv]</parent-name>
+            <remote-alias>categories</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[categorization.csv_156271FDC0524742AB30503F3C32C9AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>genres</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[genres]</local-name>
+            <parent-name>[categorization.csv]</parent-name>
+            <remote-alias>genres</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[categorization.csv_156271FDC0524742AB30503F3C32C9AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tags</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tags]</local-name>
+            <parent-name>[categorization.csv]</parent-name>
+            <remote-alias>tags</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[categorization.csv_156271FDC0524742AB30503F3C32C9AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>appid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[appid (development.csv)]</local-name>
+            <parent-name>[development.csv]</parent-name>
+            <remote-alias>appid</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[development.csv_8E4640651D4444F3B9C9FFF5D93EF126]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>developers</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[developers]</local-name>
+            <parent-name>[development.csv]</parent-name>
+            <remote-alias>developers</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[development.csv_8E4640651D4444F3B9C9FFF5D93EF126]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>publishers</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[publishers]</local-name>
+            <parent-name>[development.csv]</parent-name>
+            <remote-alias>publishers</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[development.csv_8E4640651D4444F3B9C9FFF5D93EF126]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>appid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[appid (languages.csv)]</local-name>
+            <parent-name>[languages.csv]</parent-name>
+            <remote-alias>appid</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[languages.csv_8EE284D278A849EB9C204F7B1DAEA6B0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>supported_languages</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[supported_languages]</local-name>
+            <parent-name>[languages.csv]</parent-name>
+            <remote-alias>supported_languages</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[languages.csv_8EE284D278A849EB9C204F7B1DAEA6B0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>full_audio_languages</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[full_audio_languages]</local-name>
+            <parent-name>[languages.csv]</parent-name>
+            <remote-alias>full_audio_languages</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[languages.csv_8EE284D278A849EB9C204F7B1DAEA6B0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>appid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[appid (media.csv)]</local-name>
+            <parent-name>[media.csv]</parent-name>
+            <remote-alias>appid</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[media.csv_64F532E7D9144D638E71E53B739686E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>screenshots</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[screenshots]</local-name>
+            <parent-name>[media.csv]</parent-name>
+            <remote-alias>screenshots</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[media.csv_64F532E7D9144D638E71E53B739686E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>movies</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[movies]</local-name>
+            <parent-name>[media.csv]</parent-name>
+            <remote-alias>movies</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[media.csv_64F532E7D9144D638E71E53B739686E0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>appid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[appid (metacritic.csv)]</local-name>
+            <parent-name>[metacritic.csv]</parent-name>
+            <remote-alias>appid</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[metacritic.csv_6EC786FFB51F49EB8554E594E57D84F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>metacritic_score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[metacritic_score]</local-name>
+            <parent-name>[metacritic.csv]</parent-name>
+            <remote-alias>metacritic_score</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[metacritic.csv_6EC786FFB51F49EB8554E594E57D84F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>metacritic_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[metacritic_url]</local-name>
+            <parent-name>[metacritic.csv]</parent-name>
+            <remote-alias>metacritic_url</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[metacritic.csv_6EC786FFB51F49EB8554E594E57D84F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>appid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[appid (platform.csv)]</local-name>
+            <parent-name>[platform.csv]</parent-name>
+            <remote-alias>appid</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platform.csv_86C3459369F14129987BED1317FBE405]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>windows</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[windows]</local-name>
+            <parent-name>[platform.csv]</parent-name>
+            <remote-alias>windows</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platform.csv_86C3459369F14129987BED1317FBE405]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mac</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[mac]</local-name>
+            <parent-name>[platform.csv]</parent-name>
+            <remote-alias>mac</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platform.csv_86C3459369F14129987BED1317FBE405]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>linux</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[linux]</local-name>
+            <parent-name>[platform.csv]</parent-name>
+            <remote-alias>linux</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[platform.csv_86C3459369F14129987BED1317FBE405]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>appid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[appid (playtime.csv)]</local-name>
+            <parent-name>[playtime.csv]</parent-name>
+            <remote-alias>appid</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[playtime.csv_AE31E7EF0E0646338364345E2B765279]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>average_playtime_forever</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[average_playtime_forever]</local-name>
+            <parent-name>[playtime.csv]</parent-name>
+            <remote-alias>average_playtime_forever</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[playtime.csv_AE31E7EF0E0646338364345E2B765279]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>average_playtime_two_weeks</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[average_playtime_two_weeks]</local-name>
+            <parent-name>[playtime.csv]</parent-name>
+            <remote-alias>average_playtime_two_weeks</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[playtime.csv_AE31E7EF0E0646338364345E2B765279]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>median_playtime_forever</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[median_playtime_forever]</local-name>
+            <parent-name>[playtime.csv]</parent-name>
+            <remote-alias>median_playtime_forever</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[playtime.csv_AE31E7EF0E0646338364345E2B765279]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>median_playtime_two_weeks</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[median_playtime_two_weeks]</local-name>
+            <parent-name>[playtime.csv]</parent-name>
+            <remote-alias>median_playtime_two_weeks</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[playtime.csv_AE31E7EF0E0646338364345E2B765279]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>appid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[appid (user_feedback.csv)]</local-name>
+            <parent-name>[user_feedback.csv]</parent-name>
+            <remote-alias>appid</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[user_feedback.csv_A635AABB08F347DDBC14C912C412E794]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[user_score]</local-name>
+            <parent-name>[user_feedback.csv]</parent-name>
+            <remote-alias>user_score</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[user_feedback.csv_A635AABB08F347DDBC14C912C412E794]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>positive</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[positive]</local-name>
+            <parent-name>[user_feedback.csv]</parent-name>
+            <remote-alias>positive</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[user_feedback.csv_A635AABB08F347DDBC14C912C412E794]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>negative</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[negative]</local-name>
+            <parent-name>[user_feedback.csv]</parent-name>
+            <remote-alias>negative</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[user_feedback.csv_A635AABB08F347DDBC14C912C412E794]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>score_rank</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[score_rank]</local-name>
+            <parent-name>[user_feedback.csv]</parent-name>
+            <remote-alias>score_rank</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[user_feedback.csv_A635AABB08F347DDBC14C912C412E794]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>achievements</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[achievements]</local-name>
+            <parent-name>[user_feedback.csv]</parent-name>
+            <remote-alias>achievements</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[user_feedback.csv_A635AABB08F347DDBC14C912C412E794]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>recommendations</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[recommendations]</local-name>
+            <parent-name>[user_feedback.csv]</parent-name>
+            <remote-alias>recommendations</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[user_feedback.csv_A635AABB08F347DDBC14C912C412E794]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Multiple Platforms' datatype='string' name='[Calculation_2928465707805179904]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [windows] = True OR [mac] = True OR [linux] = True THEN &quot;True&quot; ELSE &quot;False&quot; END' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[Estimated Owners (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='7' formula='[estimated_owners]' peg='0' size='2.03701e+07' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[Peak Ccu (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='4' formula='[peak_ccu]' peg='0' size='24113' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='categorization.csv' datatype='table' name='[__tableau_internal_object_id__].[categorization.csv_156271FDC0524742AB30503F3C32C9AF]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='development.csv' datatype='table' name='[__tableau_internal_object_id__].[development.csv_8E4640651D4444F3B9C9FFF5D93EF126]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='game.csv' datatype='table' name='[__tableau_internal_object_id__].[game.csv_474CF59A39684B7B94F048075B4F69EB]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='languages.csv' datatype='table' name='[__tableau_internal_object_id__].[languages.csv_8EE284D278A849EB9C204F7B1DAEA6B0]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='media.csv' datatype='table' name='[__tableau_internal_object_id__].[media.csv_64F532E7D9144D638E71E53B739686E0]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='metacritic.csv' datatype='table' name='[__tableau_internal_object_id__].[metacritic.csv_6EC786FFB51F49EB8554E594E57D84F9]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='platform.csv' datatype='table' name='[__tableau_internal_object_id__].[platform.csv_86C3459369F14129987BED1317FBE405]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='playtime.csv' datatype='table' name='[__tableau_internal_object_id__].[playtime.csv_AE31E7EF0E0646338364345E2B765279]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='user_feedback.csv' datatype='table' name='[__tableau_internal_object_id__].[user_feedback.csv_A635AABB08F347DDBC14C912C412E794]' role='measure' type='quantitative' />
+      <column caption='About The Game' datatype='string' name='[about_the_game]' role='dimension' type='nominal' />
+      <column caption='Achievements' datatype='real' name='[achievements]' role='measure' type='quantitative' />
+      <column caption='Appid (Categorization.Csv)' datatype='integer' name='[appid (categorization.csv)]' role='measure' type='quantitative' />
+      <column caption='Appid (Development.Csv)' datatype='integer' name='[appid (development.csv)]' role='measure' type='quantitative' />
+      <column caption='Appid (Languages.Csv)' datatype='integer' name='[appid (languages.csv)]' role='measure' type='quantitative' />
+      <column caption='Appid (Media.Csv)' datatype='integer' name='[appid (media.csv)]' role='measure' type='quantitative' />
+      <column caption='Appid (Metacritic.Csv)' datatype='integer' name='[appid (metacritic.csv)]' role='measure' type='quantitative' />
+      <column caption='Appid (Platform.Csv)' datatype='integer' name='[appid (platform.csv)]' role='measure' type='quantitative' />
+      <column caption='Appid (Playtime.Csv)' datatype='integer' name='[appid (playtime.csv)]' role='measure' type='quantitative' />
+      <column caption='Appid (User Feedback.Csv)' datatype='integer' name='[appid (user_feedback.csv)]' role='measure' type='quantitative' />
+      <column caption='Appid' datatype='integer' name='[appid]' role='measure' type='quantitative' />
+      <column caption='Average Playtime Forever' datatype='real' name='[average_playtime_forever]' role='measure' type='quantitative' />
+      <column caption='Average Playtime Two Weeks' datatype='real' name='[average_playtime_two_weeks]' role='measure' type='quantitative' />
+      <column caption='Categories' datatype='string' name='[categories]' role='dimension' type='nominal' />
+      <column caption='Developers' datatype='string' name='[developers]' role='dimension' type='nominal' />
+      <column caption='Dlc Count' datatype='real' name='[dlc_count]' role='measure' type='quantitative' />
+      <column caption='Estimated Owners' datatype='real' name='[estimated_owners]' role='measure' type='quantitative' />
+      <column caption='Full Audio Languages' datatype='string' name='[full_audio_languages]' role='dimension' type='nominal' />
+      <column caption='Genres' datatype='string' name='[genres]' role='dimension' type='nominal' />
+      <column caption='Header Image' datatype='string' name='[header_image]' role='dimension' type='nominal' />
+      <column caption='Linux' datatype='boolean' name='[linux]' role='dimension' type='nominal' />
+      <column caption='Mac' datatype='boolean' name='[mac]' role='dimension' type='nominal' />
+      <column caption='Median Playtime Forever' datatype='real' name='[median_playtime_forever]' role='measure' type='quantitative' />
+      <column caption='Median Playtime Two Weeks' datatype='real' name='[median_playtime_two_weeks]' role='measure' type='quantitative' />
+      <column caption='Metacritic Score' datatype='real' name='[metacritic_score]' role='measure' type='quantitative' />
+      <column caption='Metacritic Url' datatype='string' name='[metacritic_url]' role='dimension' type='nominal' />
+      <column caption='Movies' datatype='string' name='[movies]' role='dimension' type='nominal' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Negative' datatype='real' name='[negative]' role='measure' type='quantitative' />
+      <column caption='Peak Ccu' datatype='real' name='[peak_ccu]' role='measure' type='quantitative' />
+      <column caption='Positive' datatype='real' name='[positive]' role='measure' type='quantitative' />
+      <column caption='Price' datatype='real' name='[price]' role='measure' type='quantitative' />
+      <column caption='Publishers' datatype='string' name='[publishers]' role='dimension' type='nominal' />
+      <column caption='Recommendations' datatype='real' name='[recommendations]' role='measure' type='quantitative' />
+      <column caption='Release Date' datatype='date' name='[release_date]' role='dimension' type='ordinal' />
+      <column caption='Required Age' datatype='real' name='[required_age]' role='measure' type='quantitative' />
+      <column caption='Reviews' datatype='string' name='[reviews]' role='dimension' type='nominal' />
+      <column caption='Score Rank' datatype='real' name='[score_rank]' role='measure' type='quantitative' />
+      <column caption='Screenshots' datatype='string' name='[screenshots]' role='dimension' type='nominal' />
+      <column caption='Support Email' datatype='string' name='[support_email]' role='dimension' type='nominal' />
+      <column caption='Support Url' datatype='string' name='[support_url]' role='dimension' type='nominal' />
+      <column caption='Supported Languages' datatype='string' name='[supported_languages]' role='dimension' type='nominal' />
+      <column caption='Tags' datatype='string' name='[tags]' role='dimension' type='nominal' />
+      <column caption='User Score' datatype='real' name='[user_score]' role='measure' type='quantitative' />
+      <column caption='Website' datatype='string' name='[website]' role='dimension' type='nominal' />
+      <column caption='Windows' datatype='boolean' name='[windows]' role='dimension' type='nominal' />
+      <column-instance column='[price]' derivation='Avg' name='[avg:price:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[estimated_owners]' derivation='Count' name='[cnt:estimated_owners:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[negative]' derivation='Count' name='[cnt:negative:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[positive]' derivation='Count' name='[cnt:positive:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[price]' derivation='Count' name='[cnt:price:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[estimated_owners]' derivation='CountD' name='[ctd:estimated_owners:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[negative]' derivation='CountD' name='[ctd:negative:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[peak_ccu]' derivation='CountD' name='[ctd:peak_ccu:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[positive]' derivation='CountD' name='[ctd:positive:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[price]' derivation='CountD' name='[ctd:price:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[estimated_owners]' derivation='None' name='[none:estimated_owners:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[negative]' derivation='None' name='[none:negative:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[positive]' derivation='None' name='[none:positive:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[price]' derivation='None' name='[none:price:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[estimated_owners]' derivation='Sum' name='[sum:estimated_owners:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[negative]' derivation='Sum' name='[sum:negative:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[positive]' derivation='Sum' name='[sum:positive:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[price]' derivation='Sum' name='[sum:price:qk]' pivot='key' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0iyjge50u90jb41dm91vj1dw8x2m]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0iyjge50u90jb41dm91vj1dw8x2m].[cnt:negative:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0iyjge50u90jb41dm91vj1dw8x2m].[ctd:negative:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:negative:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0iyjge50u90jb41dm91vj1dw8x2m].[sum:negative:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0iyjge50u90jb41dm91vj1dw8x2m].[sum:estimated_owners:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0iyjge50u90jb41dm91vj1dw8x2m].[ctd:peak_ccu:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0iyjge50u90jb41dm91vj1dw8x2m].[cnt:positive:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0iyjge50u90jb41dm91vj1dw8x2m].[ctd:positive:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:positive:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0iyjge50u90jb41dm91vj1dw8x2m].[sum:positive:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0iyjge50u90jb41dm91vj1dw8x2m].[avg:price:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0iyjge50u90jb41dm91vj1dw8x2m].[cnt:estimated_owners:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0iyjge50u90jb41dm91vj1dw8x2m].[cnt:price:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0iyjge50u90jb41dm91vj1dw8x2m].[ctd:estimated_owners:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0iyjge50u90jb41dm91vj1dw8x2m].[ctd:price:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:estimated_owners:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:price:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0iyjge50u90jb41dm91vj1dw8x2m].[sum:price:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='appid (user_feedback.csv)' />
+        <field-sort-custom-order field='user_score' />
+        <field-sort-custom-order field='positive' />
+        <field-sort-custom-order field='negative' />
+        <field-sort-custom-order field='score_rank' />
+        <field-sort-custom-order field='achievements' />
+        <field-sort-custom-order field='recommendations' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='categorization.csv' id='categorization.csv_156271FDC0524742AB30503F3C32C9AF'>
+            <properties context=''>
+              <relation connection='textscan.1j17lm70x2xk7u1ej1ms31sbxiqx' name='categorization.csv' table='[categorization#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_PR' separator=','>
+                  <column datatype='integer' name='appid' ordinal='0' />
+                  <column datatype='string' name='categories' ordinal='1' />
+                  <column datatype='string' name='genres' ordinal='2' />
+                  <column datatype='string' name='tags' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='development.csv' id='development.csv_8E4640651D4444F3B9C9FFF5D93EF126'>
+            <properties context=''>
+              <relation connection='textscan.1j17lm70x2xk7u1ej1ms31sbxiqx' name='development.csv' table='[development#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_PR' separator=','>
+                  <column datatype='integer' name='appid' ordinal='0' />
+                  <column datatype='string' name='developers' ordinal='1' />
+                  <column datatype='string' name='publishers' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='game.csv' id='game.csv_474CF59A39684B7B94F048075B4F69EB'>
+            <properties context=''>
+              <relation connection='textscan.158451w0tqekpx1cfgnsq012z4pb' name='game.csv' table='[game#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_PR' separator=','>
+                  <column datatype='integer' name='appid' ordinal='0' />
+                  <column datatype='string' name='name' ordinal='1' />
+                  <column datatype='date' name='release_date' ordinal='2' />
+                  <column datatype='real' name='estimated_owners' ordinal='3' />
+                  <column datatype='real' name='peak_ccu' ordinal='4' />
+                  <column datatype='real' name='required_age' ordinal='5' />
+                  <column datatype='real' name='price' ordinal='6' />
+                  <column datatype='real' name='dlc_count' ordinal='7' />
+                  <column datatype='string' name='about_the_game' ordinal='8' />
+                  <column datatype='string' name='reviews' ordinal='9' />
+                  <column datatype='string' name='header_image' ordinal='10' />
+                  <column datatype='string' name='website' ordinal='11' />
+                  <column datatype='string' name='support_url' ordinal='12' />
+                  <column datatype='string' name='support_email' ordinal='13' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='languages.csv' id='languages.csv_8EE284D278A849EB9C204F7B1DAEA6B0'>
+            <properties context=''>
+              <relation connection='textscan.1j17lm70x2xk7u1ej1ms31sbxiqx' name='languages.csv' table='[languages#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_PR' separator=','>
+                  <column datatype='integer' name='appid' ordinal='0' />
+                  <column datatype='string' name='supported_languages' ordinal='1' />
+                  <column datatype='string' name='full_audio_languages' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='media.csv' id='media.csv_64F532E7D9144D638E71E53B739686E0'>
+            <properties context=''>
+              <relation connection='textscan.1j17lm70x2xk7u1ej1ms31sbxiqx' name='media.csv' table='[media#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_PR' separator=','>
+                  <column datatype='integer' name='appid' ordinal='0' />
+                  <column datatype='string' name='screenshots' ordinal='1' />
+                  <column datatype='string' name='movies' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='metacritic.csv' id='metacritic.csv_6EC786FFB51F49EB8554E594E57D84F9'>
+            <properties context=''>
+              <relation connection='textscan.1j17lm70x2xk7u1ej1ms31sbxiqx' name='metacritic.csv' table='[metacritic#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_PR' separator=','>
+                  <column datatype='integer' name='appid' ordinal='0' />
+                  <column datatype='real' name='metacritic_score' ordinal='1' />
+                  <column datatype='string' name='metacritic_url' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='platform.csv' id='platform.csv_86C3459369F14129987BED1317FBE405'>
+            <properties context=''>
+              <relation connection='textscan.1j17lm70x2xk7u1ej1ms31sbxiqx' name='platform.csv' table='[platform#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_PR' separator=','>
+                  <column datatype='integer' name='appid' ordinal='0' />
+                  <column datatype='boolean' name='windows' ordinal='1' />
+                  <column datatype='boolean' name='mac' ordinal='2' />
+                  <column datatype='boolean' name='linux' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='playtime.csv' id='playtime.csv_AE31E7EF0E0646338364345E2B765279'>
+            <properties context=''>
+              <relation connection='textscan.1j17lm70x2xk7u1ej1ms31sbxiqx' name='playtime.csv' table='[playtime#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_PR' separator=','>
+                  <column datatype='integer' name='appid' ordinal='0' />
+                  <column datatype='real' name='average_playtime_forever' ordinal='1' />
+                  <column datatype='real' name='average_playtime_two_weeks' ordinal='2' />
+                  <column datatype='real' name='median_playtime_forever' ordinal='3' />
+                  <column datatype='real' name='median_playtime_two_weeks' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='user_feedback.csv' id='user_feedback.csv_A635AABB08F347DDBC14C912C412E794'>
+            <properties context=''>
+              <relation connection='textscan.1j17lm70x2xk7u1ej1ms31sbxiqx' name='user_feedback.csv' table='[user_feedback#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_PR' separator=','>
+                  <column datatype='integer' name='appid' ordinal='0' />
+                  <column datatype='real' name='user_score' ordinal='1' />
+                  <column datatype='real' name='positive' ordinal='2' />
+                  <column datatype='real' name='negative' ordinal='3' />
+                  <column datatype='real' name='score_rank' ordinal='4' />
+                  <column datatype='real' name='achievements' ordinal='5' />
+                  <column datatype='real' name='recommendations' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[appid]' />
+              <expression op='[appid (categorization.csv)]' />
+            </expression>
+            <first-end-point object-id='game.csv_474CF59A39684B7B94F048075B4F69EB' />
+            <second-end-point object-id='categorization.csv_156271FDC0524742AB30503F3C32C9AF' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[appid]' />
+              <expression op='[appid (development.csv)]' />
+            </expression>
+            <first-end-point object-id='game.csv_474CF59A39684B7B94F048075B4F69EB' />
+            <second-end-point object-id='development.csv_8E4640651D4444F3B9C9FFF5D93EF126' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[appid]' />
+              <expression op='[appid (languages.csv)]' />
+            </expression>
+            <first-end-point object-id='game.csv_474CF59A39684B7B94F048075B4F69EB' />
+            <second-end-point object-id='languages.csv_8EE284D278A849EB9C204F7B1DAEA6B0' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[appid]' />
+              <expression op='[appid (media.csv)]' />
+            </expression>
+            <first-end-point object-id='game.csv_474CF59A39684B7B94F048075B4F69EB' />
+            <second-end-point object-id='media.csv_64F532E7D9144D638E71E53B739686E0' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[appid]' />
+              <expression op='[appid (metacritic.csv)]' />
+            </expression>
+            <first-end-point object-id='game.csv_474CF59A39684B7B94F048075B4F69EB' />
+            <second-end-point object-id='metacritic.csv_6EC786FFB51F49EB8554E594E57D84F9' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[appid]' />
+              <expression op='[appid (platform.csv)]' />
+            </expression>
+            <first-end-point object-id='game.csv_474CF59A39684B7B94F048075B4F69EB' />
+            <second-end-point object-id='platform.csv_86C3459369F14129987BED1317FBE405' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[appid]' />
+              <expression op='[appid (playtime.csv)]' />
+            </expression>
+            <first-end-point object-id='game.csv_474CF59A39684B7B94F048075B4F69EB' />
+            <second-end-point object-id='playtime.csv_AE31E7EF0E0646338364345E2B765279' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[appid]' />
+              <expression op='[appid (user_feedback.csv)]' />
+            </expression>
+            <first-end-point object-id='game.csv_474CF59A39684B7B94F048075B4F69EB' />
+            <second-end-point object-id='user_feedback.csv_A635AABB08F347DDBC14C912C412E794' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Category'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='game.csv+ (Multiple Connections)' name='federated.0iyjge50u90jb41dm91vj1dw8x2m' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0iyjge50u90jb41dm91vj1dw8x2m'>
+            <column-instance column='[estimated_owners]' derivation='CountD' name='[ctd:estimated_owners:qk]' pivot='key' type='quantitative' />
+            <column caption='Estimated Owners' datatype='real' name='[estimated_owners]' role='measure' type='quantitative' />
+            <column caption='Genres' datatype='string' name='[genres]' role='dimension' type='nominal' />
+            <column-instance column='[genres]' derivation='None' name='[none:genres:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0iyjge50u90jb41dm91vj1dw8x2m].[ctd:estimated_owners:qk]</rows>
+        <cols>[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:genres:nk]</cols>
+      </table>
+      <simple-id uuid='{FA9F2B8D-3AEE-4B7A-94BF-D9EBFC98F7BA}' />
+    </worksheet>
+    <worksheet name='Feedback-DualLine'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='game.csv+ (Multiple Connections)' name='federated.0iyjge50u90jb41dm91vj1dw8x2m' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0iyjge50u90jb41dm91vj1dw8x2m'>
+            <column caption='Achievements' datatype='real' name='[achievements]' role='measure' type='quantitative' />
+            <column-instance column='[negative]' derivation='CountD' name='[ctd:negative:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[positive]' derivation='CountD' name='[ctd:positive:qk]' pivot='key' type='quantitative' />
+            <column caption='Negative' datatype='real' name='[negative]' role='measure' type='quantitative' />
+            <column-instance column='[achievements]' derivation='None' name='[none:achievements:qk]' pivot='key' type='quantitative' />
+            <column caption='Positive' datatype='real' name='[positive]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[ctd:positive:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[:Measure Names]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[ctd:positive:qk]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[ctd:negative:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[ctd:negative:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[:Measure Names]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[ctd:positive:qk]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[ctd:negative:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[ctd:positive:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[:Measure Names]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[ctd:positive:qk]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[ctd:negative:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0iyjge50u90jb41dm91vj1dw8x2m].[ctd:negative:qk] + [federated.0iyjge50u90jb41dm91vj1dw8x2m].[ctd:positive:qk])</rows>
+        <cols>[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:achievements:qk]</cols>
+      </table>
+      <simple-id uuid='{C307D1DC-5868-429B-9DBB-ED5154648BFE}' />
+    </worksheet>
+    <worksheet name='Feedback-ScatterPlot'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='game.csv+ (Multiple Connections)' name='federated.0iyjge50u90jb41dm91vj1dw8x2m' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0iyjge50u90jb41dm91vj1dw8x2m'>
+            <column caption='Achievements' datatype='real' name='[achievements]' role='measure' type='quantitative' />
+            <column caption='Negative' datatype='real' name='[negative]' role='measure' type='quantitative' />
+            <column-instance column='[achievements]' derivation='None' name='[none:achievements:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[negative]' derivation='None' name='[none:negative:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[positive]' derivation='None' name='[none:positive:qk]' pivot='key' type='quantitative' />
+            <column caption='Positive' datatype='real' name='[positive]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:achievements:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:positive:qk]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:achievements:qk]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:negative:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:negative:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:positive:qk]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:achievements:qk]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:negative:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:achievements:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:positive:qk]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:achievements:qk]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:negative:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:negative:qk] + [federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:achievements:qk])</rows>
+        <cols>[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:positive:qk]</cols>
+      </table>
+      <simple-id uuid='{6E855230-8584-4068-B1B3-32AF12E8275F}' />
+    </worksheet>
+    <worksheet name='Game-ScatterPlot'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='game.csv+ (Multiple Connections)' name='federated.0iyjge50u90jb41dm91vj1dw8x2m' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0iyjge50u90jb41dm91vj1dw8x2m'>
+            <column caption='Estimated Owners' datatype='real' name='[estimated_owners]' role='measure' type='quantitative' />
+            <column-instance column='[estimated_owners]' derivation='None' name='[none:estimated_owners:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[peak_ccu]' derivation='None' name='[none:peak_ccu:qk]' pivot='key' type='quantitative' />
+            <column caption='Peak Ccu' datatype='real' name='[peak_ccu]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refline'>
+            <format attr='stroke-color' id='refline0' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:estimated_owners:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:peak_ccu:qk]' enable-instant-analytics='true' fill-above='false' fill-below='false' formula='quantiles' id='refline0' label-type='none' scope='per-table' symmetric='true' tile-count='4' value-column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:peak_ccu:qk]' z-order='1' />
+            <reference-line axis-column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:estimated_owners:qk]' enable-instant-analytics='true' fill-above='false' fill-below='false' formula='quantiles' id='refline2' label-type='none' scope='per-table' symmetric='true' tile-count='4' value-column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:estimated_owners:qk]' z-order='2' />
+          </pane>
+        </panes>
+        <rows>[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:estimated_owners:qk]</rows>
+        <cols>[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:peak_ccu:qk]</cols>
+      </table>
+      <simple-id uuid='{222E5336-AF48-48BF-B7F7-F1F65C974645}' />
+    </worksheet>
+    <worksheet name='Game-Treemap'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='game.csv+ (Multiple Connections)' name='federated.0iyjge50u90jb41dm91vj1dw8x2m' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0iyjge50u90jb41dm91vj1dw8x2m'>
+            <column-instance column='[peak_ccu]' derivation='Count' name='[cnt:peak_ccu:qk]' pivot='key' type='quantitative' />
+            <column caption='Estimated Owners' datatype='real' name='[estimated_owners]' role='measure' type='quantitative' />
+            <column-instance column='[estimated_owners]' derivation='None' name='[none:estimated_owners:qk]' pivot='key' type='quantitative' />
+            <column caption='Peak Ccu' datatype='real' name='[peak_ccu]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[cnt:peak_ccu:qk]' />
+              <color column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[cnt:peak_ccu:qk]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:estimated_owners:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{14ED064A-8826-46C0-B9C0-650E81AE1485}' />
+    </worksheet>
+    <worksheet name='Game-TrenLine'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='game.csv+ (Multiple Connections)' name='federated.0iyjge50u90jb41dm91vj1dw8x2m' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0iyjge50u90jb41dm91vj1dw8x2m'>
+            <column caption='Estimated Owners' datatype='real' name='[estimated_owners]' role='measure' type='quantitative' />
+            <column-instance column='[estimated_owners]' derivation='None' name='[none:estimated_owners:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[peak_ccu]' derivation='None' name='[none:peak_ccu:qk]' pivot='key' type='quantitative' />
+            <column caption='Peak Ccu' datatype='real' name='[peak_ccu]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:estimated_owners:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:estimated_owners:qk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <reference-line axis-column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:estimated_owners:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-table' value-column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:estimated_owners:qk]' z-order='1' />
+            <reference-line axis-column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:peak_ccu:qk]' enable-instant-analytics='true' formula='average' id='refline1' label-type='automatic' probability='95' scope='per-table' value-column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:peak_ccu:qk]' z-order='2' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:peak_ccu:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:estimated_owners:qk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:estimated_owners:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:estimated_owners:qk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+          </pane>
+        </panes>
+        <rows>([federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:peak_ccu:qk] + [federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:estimated_owners:qk])</rows>
+        <cols>[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:estimated_owners:qk]</cols>
+      </table>
+      <simple-id uuid='{BC9937F8-816A-456D-9542-89FF2547E47F}' />
+    </worksheet>
+    <worksheet name='Platform-Barplot'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='game.csv+ (Multiple Connections)' name='federated.0iyjge50u90jb41dm91vj1dw8x2m' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0iyjge50u90jb41dm91vj1dw8x2m'>
+            <column caption='Multiple Platforms' datatype='string' name='[Calculation_2928465707805179904]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [windows] = True OR [mac] = True OR [linux] = True THEN &quot;True&quot; ELSE &quot;False&quot; END' />
+            </column>
+            <column caption='Estimated Owners' datatype='real' name='[estimated_owners]' role='measure' type='quantitative' />
+            <column caption='Linux' datatype='boolean' name='[linux]' role='dimension' type='nominal' />
+            <column caption='Mac' datatype='boolean' name='[mac]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_2928465707805179904]' derivation='None' name='[none:Calculation_2928465707805179904:nk]' pivot='key' type='nominal' />
+            <column-instance column='[estimated_owners]' derivation='None' name='[none:estimated_owners:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[linux]' derivation='None' name='[none:linux:nk]' pivot='key' type='nominal' />
+            <column-instance column='[mac]' derivation='None' name='[none:mac:nk]' pivot='key' type='nominal' />
+            <column-instance column='[windows]' derivation='None' name='[none:windows:nk]' pivot='key' type='nominal' />
+            <column caption='Windows' datatype='boolean' name='[windows]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:Calculation_2928465707805179904:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:estimated_owners:qk]</rows>
+        <cols>([federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:mac:nk] / ([federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:windows:nk] / [federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:linux:nk]))</cols>
+      </table>
+      <simple-id uuid='{9CA6F6D8-AEB3-4201-B38F-BBD57036D768}' />
+    </worksheet>
+    <worksheet name='Playtime-Plot'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='game.csv+ (Multiple Connections)' name='federated.0iyjge50u90jb41dm91vj1dw8x2m' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0iyjge50u90jb41dm91vj1dw8x2m'>
+            <column caption='Appid (Playtime.Csv)' datatype='integer' name='[appid (playtime.csv)]' role='measure' type='quantitative' />
+            <column caption='Average Playtime Forever' datatype='real' name='[average_playtime_forever]' role='measure' type='quantitative' />
+            <column caption='Median Playtime Forever' datatype='real' name='[median_playtime_forever]' role='measure' type='quantitative' />
+            <column-instance column='[appid (playtime.csv)]' derivation='None' name='[none:appid (playtime.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[average_playtime_forever]' derivation='None' name='[none:average_playtime_forever:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[median_playtime_forever]' derivation='None' name='[none:median_playtime_forever:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:median_playtime_forever:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[:Measure Names]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:average_playtime_forever:qk]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:median_playtime_forever:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:average_playtime_forever:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[:Measure Names]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:average_playtime_forever:qk]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:median_playtime_forever:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:median_playtime_forever:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[:Measure Names]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:average_playtime_forever:qk]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:median_playtime_forever:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:average_playtime_forever:qk] + [federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:median_playtime_forever:qk])</rows>
+        <cols>[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:appid (playtime.csv):qk]</cols>
+      </table>
+      <simple-id uuid='{02248E5D-13A8-47E3-B7F2-420E7926FC24}' />
+    </worksheet>
+    <worksheet name='Price-Lineplot'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='game.csv+ (Multiple Connections)' name='federated.0iyjge50u90jb41dm91vj1dw8x2m' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0iyjge50u90jb41dm91vj1dw8x2m'>
+            <column-instance column='[price]' derivation='Avg' name='[avg:price:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[price]' derivation='None' name='[none:price:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[user_score]' derivation='None' name='[none:user_score:qk]' pivot='key' type='quantitative' />
+            <column caption='Price' datatype='real' name='[price]' role='measure' type='quantitative' />
+            <column caption='User Score' datatype='real' name='[user_score]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[avg:price:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[:Measure Names]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:price:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='7' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:user_score:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[:Measure Names]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:price:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='8' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[avg:price:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[:Measure Names]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:price:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:user_score:qk] + [federated.0iyjge50u90jb41dm91vj1dw8x2m].[avg:price:qk])</rows>
+        <cols>[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:price:qk]</cols>
+      </table>
+      <simple-id uuid='{BFD452C2-AB72-4BCA-A261-276E025FB691}' />
+    </worksheet>
+    <worksheet name='User_Score-ScatterPlot'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='game.csv+ (Multiple Connections)' name='federated.0iyjge50u90jb41dm91vj1dw8x2m' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0iyjge50u90jb41dm91vj1dw8x2m'>
+            <column caption='Metacritic Score' datatype='real' name='[metacritic_score]' role='measure' type='quantitative' />
+            <column-instance column='[metacritic_score]' derivation='None' name='[none:metacritic_score:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[user_score]' derivation='None' name='[none:user_score:qk]' pivot='key' type='quantitative' />
+            <column caption='User Score' datatype='real' name='[user_score]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:metacritic_score:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[:Measure Names]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:user_score:qk]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:metacritic_score:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:user_score:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[:Measure Names]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:user_score:qk]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:metacritic_score:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:metacritic_score:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[:Measure Names]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:user_score:qk]' />
+              <text column='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:metacritic_score:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:user_score:qk] + [federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:metacritic_score:qk])</rows>
+        <cols>[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:metacritic_score:qk]</cols>
+      </table>
+      <simple-id uuid='{D321FCF8-9573-4468-BC6A-300B86D7C294}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Game-ScatterPlot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='1' param='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:estimated_owners:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A93B59FB-3376-4FD4-871E-8A6F94285954}' />
+    </window>
+    <window class='worksheet' name='Game-Treemap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[cnt:peak_ccu:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{297CA90C-2EA3-4B0C-9A51-F45E026D45E8}' />
+    </window>
+    <window class='worksheet' name='Game-TrenLine'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='1' param='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:estimated_owners:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3C90165E-DA4C-4D9C-B35D-B8D434B03B41}' />
+    </window>
+    <window class='worksheet' name='Platform-Barplot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{04B026AF-68B6-4FD2-A9DD-DEB1FB86A1A1}' />
+    </window>
+    <window class='worksheet' name='User_Score-ScatterPlot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{25DBF1BC-C340-45EB-B47A-77828EC3188D}' />
+    </window>
+    <window class='worksheet' name='Feedback-ScatterPlot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4B967BE4-2678-464E-8489-B6A8CFCE881B}' />
+    </window>
+    <window class='worksheet' name='Feedback-DualLine'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C1A6773D-74CD-4863-8669-C4FF4D08968E}' />
+    </window>
+    <window class='worksheet' name='Playtime-Plot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7E581160-1642-4AC0-BCAE-3ED9ED79D5AD}' />
+    </window>
+    <window class='worksheet' name='Price-Lineplot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card pane-specification-id='7' param='[federated.0iyjge50u90jb41dm91vj1dw8x2m].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{662D26EA-4F41-41E6-A410-09FD8A33B9C4}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Category'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='29'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:estimated_owners:qk]</field>
+            <field>[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:genres:nk]</field>
+            <field>[federated.0iyjge50u90jb41dm91vj1dw8x2m].[none:tags:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{7D20E92A-D58F-4AF8-91E3-A978A6E62CA3}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Category' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAgAElEQVR4nO29WYxkZ5aY990b+75mZERG7llZlVUki+wmh+7uabXY3aMez4xlS8JYEmwZ
+      HknwoicBejHgB2MswIZtjPxgwzDgB1uWoG0gCRBmPO2RR93TzW42m2SxyNqXzIyMiIx937e7
+      +CGLVZWsiPtHUVXBYuX9ABKIWyfjPyfuPfffzjm/pOu6jonJGUX+shUwMfkyMR3A5ExjOoDJ
+      mcZ0AJMzjekAJmca0wFMzjTWZ/Eluq5jrqaafBV5Zj2ApmmmE5h85XjqHqBZyTOUPcQjAaqF
+      NLhjRAMuJElClmUkSXoeepqYPBeeugdQlQmNVgdl1KVULlJvDJ6HXiYmC+GpHSAYDCJJkD44
+      YDAaU6yUn4deJiYL4SmHQBqp1BHN7pjXv/YWm1qbSsfyfDQzMVkA0rMKhlNV1ZwDmHzlMPcB
+      TM40pgOYnGlMBzA505gOYHKmMR3A5ExjOoDJmcZ0AJMzjekAJmca0wFMzjSmA5icaUwHMDnT
+      PH049GREbzBC1xRy2QyDsfI89DIxWQhP7QDHh3dI5cv0Om1cXi/79w6eh14mJgvhqTPCVtc3
+      uV/s4PZ4yNy5x9rmLpqmvVApkf/rv/yQdKn18PNf/PYFtldC/L3ff/+U3P/wn38Pq8UcBZ5l
+      njof4PDggFytjzxo0Jvo9Ho9gl4nuq6/MOHQhVqXVKH58HN3OEHVOXUNwGKxYLWa+Qxnmad0
+      AJndV7/O7vPRxcRk4Zj9v8mZxnQAkzON6QAmZxrTAUzONKYDmJxpTAcwOdOYDmBypjEdwORM
+      YzqAyZnGdACTM83MUIhcJoWqDLlz3OEH33l7kTqZmCyMmQ5QPE5xN9dhbSW6SH1MTBbKTAfw
+      ON189wffIOq2LVIfE5OFMnMO4HRZ+X/++e/zJ+9+uEh9TEwWysweIBCKsbl7gQubq4vUx8Rk
+      ocx0gPuHKdTxiE9v3GBtfe3h9dTtTxg6Y6x4dQ6Oy4RiSbaSsYUoa2LyrJnpAF974zJ/9Mc/
+      ZuPiG6eur29ucb/YoV7v8+obr3N07wBNi75QKZGf10PTNFRVfUJOUVUkXgydTb4cZjrAp59+
+      QiiyxGQ0fOyqzmAwYDgc4HVApVRBwYIsyy9USuTndZBlGYvlydRHq5kSeeaZOQl2Wy3ki0Wq
+      tcfzaHVa3REBp5WltR1kTeX87tYC1DQxeT7MXgb1B/B5utjsj4vIJNc3Hn5KrKw8T91MTJ47
+      M3uAYb9DtdVjbSWxSH1MTBbKTAdY2dglZJ/wr3/880XqY2KyUKYOgXRd5ziTwh5c5W/++W8t
+      WicTk4UxtQeopG+QbkqcW1/iT/7Njxetk4nJwpjqALLFijoZM5lMkC1PXT3RxOQrw9SnO7q2
+      x9vWY8rNPr/2ve8sWicTk4Ux1QF6zSqpbAFJkrh3/5DLl17eYoh/cuWQj+8VHn5+dSvGb37j
+      5bXX5DRTh0BWu5N8/phINEr+OL1onRbKYb7Bz69nH/53L1v7slUyWSBTHcDh9vHdb36dDz78
+      CJs7uGidTEwWxsx9gHyhhNXtJez+8mN7TEyeF7NjgVwumqXsqYMmTExeNmZuhOkOL7/zn/4N
+      stnMonUyMVkYUx1AGw/4kx/+AZH4BuHEBltmwKfJS8rUIZDF4eadP/NtGq06lUpl0TqZmCyM
+      mXOAzkhla3UZXZt+DGq/Xef69euU6u3nppyJyfNmZpzDpUuXKFVqnLM6p/57o1rBFwpRq1SJ
+      hXzouo6maS9ERtjnkxx1XUfXnkx91DR9ahqnpmnPSTOTF42ZPcCnVz+kXKnS6nSn/ruqgSxJ
+      SPqL/7Doj/1/2r+YnF1m9gA2XSNTKOAL6XDhyX8PRUIc5cpEYitIkoQkSS9OTvDnPsuShCQ/
+      6euz9JWnyJq8nMx0AE1TGQ4G2N3jqf/uC8V4LWSWQzH5ajP1VdcopBjKbqyyjCR/+W90E5Pn
+      xdQeIBBbYxsHX/vam7RazWkiJiYvBdN3gtUx/+pf/BPiq+eQXX7+/YSZGG/ycjLVAWSbi+98
+      53s47Bbu5nuL1snEZGFMnQNIksSw1+C9Tw/xOZ4sKWhi8rIwtQdoVfPsvfU9VneKKMr0nWAT
+      k5eBqQ5QL6Zx2JZIH+wjSRIrK2aJdJOXk6kOsLLzGqVKgWRyHavDtWidTEwWxlQH6DTK1Hsq
+      ly/sLFofE5OFMtUBXC43H/7hv6Kaz+AOLPGtty4vWi8Tk4UwdRXIE4rzl/69P0en1UKXzPr5
+      Ji8vM6O+7u+n+LN/7tfp1vKL1MfEZKHMdIC3v/lNbl75gEuvv7VIfUxMFsrsjLD+mG//2e/i
+      d5qhwSYvL1Mnwep4wO//o79PfP0cqsXFX/iN7z8ppOtUy0VcgQgep/05q2li8nyYEQvk5Dd/
+      67fIlZp4gtGpf1jJpaiPLCQ8ZqiEyVeXqQ4gSRL5QoFAOI7d5Zj6h41aE8kXJJ3J8sreua/s
+      Mamfz//Vdf25hn/8wXv3+dn17MPPX9+N81e+d+m5tWdizMyMsJDbwUeffEogmmRr7cnD8JaT
+      y+xnKviCka/0MamfT3+UJAmr9fmdiVBrD9jP1R9+Ti75nmt7JsbMzgl2OLBI0O50pv57IJrk
+      zWjyuSlmYrIIZi7xOD1+4vE4NvnFr/pgYvJFmekAsjbm5o0b+CNmNpjJy8tMB9hP5/mPf+ev
+      Iw3MAyNMXl5mOsCFc9v84mc/w79kjvNNXl5mxwIdHvEr3/gm7YoZC2Ty8jLTAd588+t88sH7
+      bF14dZH6mJgslJnLoIMJvPO979PrTV8GNTF5Gm6kyqiPFSjeTgTxuadvsi6S2bFA//jvs7J+
+      nqEm8xd/6weL1svkJeO/+4fv0h9OHn7+u3/jHV4/F//yFHrAjFggB2++9U22916hUasuWicT
+      k4Uxoy6QjEUfcvv2Xa7dvLdonUxMFsbMSfDu+Us0q0WS6xuL1MfEZKHMnARfv3mT9c0t7C6z
+      LIrJy8vMHiDkcfDptevcOzCPSTV5eZnqALXcPrnGAF1VUKbE0ZuYvCxMHQKFE9ssd8Z84xvf
+      4uBgf9E6mZgsjKk9gKYM+cVPf8QP/98f0hrOyPLSde5de5+DnHmAhslXl6k9gMXu5rvf+wGK
+      MuDO8fQHvFUrYPeFGE80NE0zUyLnZFZ7P/zlwamd0m++kmQ4Vrh6v/Twmtdl4503pq/KdQdj
+      /vST0/O1f/ftbayWF7Oqh6pqL0Tl8ZmrQK1agZvZNpvJ6Unxg8GIVr1CS9M5vxk2UyLnZFZ7
+      /+BfX2M8eeSku6thKs0+/9cPP3l4LRn18WtvTa/X2h2elgX49bd3Xth0S4tFfiF0m6pBo5Ci
+      q1hwSGNag+kZYfG1LZZXkgwnX/4Db2LyRZl5SN45zYI/GGFjY3PmH0sWOy6zdKjJV5ipA8Rm
+      McUvr+8jq0Pe/cUHi9bJxGRhTB8CVfIMRyMyuSLVlnlInsnLy1QH2Lj07xBY7QJgsZllD01e
+      XqY6gNXuJBp1LloXE5OF82IuEpuYLAjTAUzONF/+TsRLwN/9v3/Cveyj+kn/yQ8u8+tvn/sS
+      NTL5L//eH9IdjB9+/q/+o1/lte3lJ+RMB3gG9IcTOv1HP/bjO7omXw6d/viUAyjq9A1dcwhk
+      cqYxHcDkTGM6gMmZxnQAkzON6QAmZxrTAUzONF/YAQbdJjdv3qBYNVMiTb66fOF9AJvDw87W
+      OoeZCsuRALquP/xvHlRNp9UbnboW9j2b+KPPazBLr1nXNU2j3hmeuuZ322emF37+K3RdZ6Ko
+      T9gX8jmfbE9/Mk3yoW5PWHIi2+6PT61rux3WmfZN++4XAV3XGY4ndAeP6oXKkkTQ66DTHzP5
+      nH12q4Xm539Pr2PuDMRZ7X1hB5gMOxwcV9m7sPvwx3+anOBMqcnf+d/+v1PX/vl/+9vI8rPI
+      MNOf+DTrAZn2t7qu81/83h+eesj++//se+ytR+ZuL1dt87f/lz8+df2f/jd/aWZ7U79xinq6
+      rvM//uOfcevoUc3W3/mN13nz/JNHWT3NC2nR6MCHt3P83j97/+G15ZCH//3v/Ca/98/e49pB
+      +eH1v/aD1/jVV9f4W//zH536jn/wX/8HeF3zRSvrOly5m+d/+ie/eHhtKej+4g7QbjbR1Aml
+      Sp3kcuSpc4Il6cm3qWyRscj/9tMSic/lBEvSE7m4wAx9pan5w7I8/TpMyUGWJOQZ9j3RnjSj
+      PUma+ltaLJansm+Wzl82siQhTdH5edkny9LUZ+4LO8Dy2jbLa1/0r01MXgzMVSCTM43pACZn
+      GtMBTM40pgOYnGlMBzA505gOYHKmeaYZYXcyVX76afrh54jfzW+/c4l/+dPbVJqP6gt9+7V1
+      XA7b1O9491qGW0ePNkEurEd5541N/o8/uHJqU+cvfHuPRnfITz45engt7HfzH75z6RladJp7
+      2Ro/vpp6+Dnkc/GXv/vKc2vvWfCLm1muHTwqsHsuGeb7b27zf/7RVSbKo8y1P/+tC/SHE/7N
+      x4cPrwU8Tv7q91/lD967S7766Ljcb1xaZTMe5J/+6Maptn7nN97g6r0inx4UH17bWQnza29t
+      Pw/TAPjlrWM+2X/U3lYixA9+ZXr91Gk8UwfIltr80fuPzhPYSgT57Xcu8d6NLPeP6w+vr8cC
+      XFifXnT3ZqrMD3/56DtGE5V33tjkh7/cR3usevI7b2xyXD7d3sZy4Lk6wHHldHtrMf8L7wC3
+      09VTOv+Zy+t8/81t/viDA4bjR9WZv/XqGo3O8JRsIuLlr37/VX55K8f1w0cvpVjQw1LQc0oW
+      4K/94DJ3Mqfb+9XX1p6rA9zN1k61981XVp/KAcwhkMmZxnQAkzON6QAmZ5ov7AC6ppI+OmKi
+      vpjRhiYm8/CFHSCfuo/L7+fe/UOxsInJC8oXdoCxIhMMBbFJL2bChYnJPHxhB4hEvNz45FMc
+      vtCz1MfEZKF84X0Af3SFr0dXnqUuJiYLR9KfQc7cZ8eQtnojivVHO75Ou4WN5QCZUpvBY5su
+      8bAHp93KUbF16nsurIUpN/s0HsvHDXodLIc83MvWT2UIbiz7GSsahVr34TWHzcJmPECm3GYw
+      etTectiDa0p759dOTmJ8vL2Ax0E87OHecf1Uru/6sp/JjPay5Tb9x9sLeXA7rKQ+395qmGqr
+      fyrf+LP27h/X0R5vL+ZHUTXyj7Vnt1nYmtWe00qqcLq93dUQtfaQenvw8Jrf4yAR9nA/1zi1
+      sbge86NoGvnqY+1ZZbYSQbKVDv3ho1zaWMiN12njcEp79faQ2uPtue0kIl72c41Tx8Cuxfxo
+      mkZuSnvHlQ69x9sLuvG67BwWThdgOJcM0eicbs/ntrMyrb0lH5oOucd2tG1W+dk4AJw4gTQl
+      jU/TtCfS2T7LVf389Wmys66b7c33HWZ7xu09s32AWfnAn1ek02yiGeR4Ps6g02aoqIJ8XoXj
+      TIab1z6m3BhMlZUetqeTPbrD4WGWfLE6VXaaHs1Gc377GvPbN+x2GExE9n3GmGajN6fOGs1G
+      67nZp0y5Pk121OsyGCtz2jd5Cvv0Z2ff1G94jkxLTP63Q+c4lcIfCtB7rET5LNlur0spX6De
+      7AhkTc4CCz8fwO31YFQ3QtcVivkSJ4urMssen+AbLXi9LmTZhsstKpEh4XFHCEU9RKPTg/Ee
+      p92o0uz0QHYQFCx2DXttyrUmE0VnKxQ0lFUmQ4qFMsPRhPXtLYEWKvnjPMPBkEhyQyCrUy0X
+      6Q2GONzi1bl2s0az3UOXbAQFOg97Hcq1BhNFE9qnTkYUCiWGozFrW6JAOJXCcYHBcEA4sS6Q
+      1amVS/QGQ2wuP8ZaQKdZo9HuoUnWmfYtrAcYD7qkDg/I5IrTyt08hoTdbn/4n7jIyoROq0Mu
+      X2DQHwml2/USxXKFWqMtlPUGwiSTqzQbVaGsw+0lmUwy6rYR7YxYrA4SySR2JvQem8xOR2Y5
+      scJq3E2uINY5HI2RTCxTrZSFsl5/iGQySatRE8o63J4H9nUQHf8hW+0kkklcFpXOQNQry8QS
+      CVbjXvKfm1RPIxRdYmUlPpd9ngf2tQ3sW1gPUM5m8MQ38dstgodawmqzPXASCWNhHU2z8dpb
+      bzEYq0TCAaEe8dUNeoPBqRWXWXRadVqdHvGVVaHsqN+lXGviX1pGVKlGVUYUC2U0hxe/c3pe
+      xCM0SoU844nC9npcqEe9UqY3HLG6Jq5Z0201aHa6LM9lX49yrYEvGhM+NJoyplAoo1jcLHsc
+      AmmdcqHAaDJha13UA0CjWqE7GLI6h2yv3aDRNrZvYT2APxKhnE1znC8Z9wC6SiGXI5fLkcsV
+      UAyfVJ1et0210mA06NDqDg1kTwhFY6wkYlQr4rd6pdpgMuxRKBaFsq1KhcF4TDFfEL4hx90W
+      Y2VINlOgNxb1ACrddo9Wo0ShJO4Bmu0evXadYlH8hqxU60yGfYrFglC2XS0znEwo5Oawr99m
+      MulzfFyk+9hy5nRUOp0erWaJQkncAzRaXfqdJsVCSShbqTYYD/sUCrPv38J6AHUyQtV1ut2u
+      oZwk29h75RV0XZ+jypzMZFjn3n6O1RUXYzlAyO8ykNfJpA6xOuxEIuIxssdhoas6Cc1RstTt
+      c1ModlheCgnfKjanm0Y9z/b2ClZhJTwr41GXxMoqik30NgWLPsIbSsxVoc/jstIeOwg5xbJu
+      n4dcvkViOSy2z+GiXu+xs70ys57qYxozGXWJJ1ZRreIyh1bG2IJxZOFA88S+5tBGODBbh4X1
+      AJPRBJvDgaYohj2ArutkUvtUyiV++u57DBVjQ4PRJG+99ToXLn2N7aTxtKjfqnP3fopOu01v
+      jvlCfzCkWjym3jJ2WoBRf0CjXqVYqQvmOCcvg069QbZQRBNL0+t0ODpMnyoYO4vhaMDxUZru
+      PPb1h1RLublWxMb9Ac16jUK5JtZYGdOpN8gUinMMNTUGvS5HB2nGgnsNJ/bl0kd05rBv0B9S
+      LeWpNWf3nAtxAFVRCCZWiUdCnDu/Y9iorvYoVzrcvHGDkNfD2PCma3Q6A/rdBtnsMT3BhMvl
+      j/DGa3s4XR7CIdHqEmB1EPS5hDccAEkiEg6gqdNqOn8OHWKJJZShemo3dsYXEwhHka2gTUTD
+      JbC7A7id0tTCuk9gsRPyueZ4l3JiXySIpupieR2WV5aYDNW5qlP7QhEsNtAUsX02lx+PU57T
+      PhshvxtNn93DLWQIpE4mdLpdVEmi32zhNVgKlSwetraSWCyrFKsdPDajKaXEsNdF0XUEs+UT
+      aUmnWm+xs3sOq8148tmslFjZ2MJllQzHkACjTgM5mODyqpNioWDs4LpKc6Bx6bXXaFTL2AyH
+      CDrFYpULr76GNmxSHRgPgYrFIts7u6BNKFWMz21oVUvE17dw28T2jbtNdP8yl5MuSoWCYJKv
+      0ugpXHztMq3afPadv/Qq2qhFtWf8OD6yT6VYMV65atdKLK1t4RHYt5AewO6yc+fqVQqVCoWC
+      8SRYkiQi0SXsdieJ5ahwFcjp8WKdsyI1SDjtMqlUinrTeFjTbdVptHtMRgNKlbqh7GTYo1Sp
+      o6oKpUJJ8IZUyB0XUVWVarEo6PZ1ivkCE0Wl3azRFUzyG+UyvcGYYa9NrWE8rOm1GtTbXSbj
+      IaWy8cM0GQ0olWuoqkKxUBRMglVyx0UUVaVaKjES2FfKFxhPFDrNGh2RfZUy3cGIYb9NrW68
+      INBvNak3OyjjEUUD+55ZLJAxOt1mC91mw2qx4HQ6DZ/rTiVHuj4k5HWznIhjNTwzYEixMCC2
+      ZKfS0FheMhra6Bwd3GKieXC63awlY7MlNZXjzBG9kcb65ibuGWVcPvveSuGYSrNLYnWDkM9t
+      KNtuVMkVK4SiCZajIYz8d9TvcJQ5xuEJsrEaN5zcqpMRR0dHaLKDzc11w7evrqnksmk6Q4X1
+      jU08TqMJqE61mKPc6JBIrhPyewxkodOsclwoE4zEiS+Fje0bdDlKZ7G7A2ysJZANhDVlzFEq
+      hSLZ2drcwGY1sk8jnz2iLbBvQQ4A2bs3uVOoE3C7+PrbbxmOvUbdKldvZfB7Pexc2MVhcCNr
+      pQOufJJnZcXPyuYeYZ/RMEHj9o0rlEtDomvrvHJetLN6QvE4jX8pidshHjG2qiUUm5dIwPgh
+      ARj121TbY5Jx8a40TEgdFtjcXp9jsKeRSWVY2dgQvDxOKOYy+KIreOawr10rM7a4iQa9Qtnx
+      oEO5OWQ1sSSUBYXUYX5O+3QyR2kS6+vY5jhPopTL4Ims4HU+ad/ClkED0Sg7dje9/mSOcZcF
+      l9PGcNgjm82xs7k240fR6HYU4okgNpeXgEccCuF2Bdi+uMZKfFmoRT5zSK2r4HM7WLYbj3w7
+      tQI3UxUSUT+rG7N7FoDJoM2VD26S2F0jGhFtbmlc++gDQsvL2LyiB0kntX+TsebB6XJgETxJ
+      hWyKSnuM3+MU2tetF7mxXyIeC7C2YayHMuzy0fufsrK3QSgo+p01bnz8If5IDKtn1gk8n3HS
+      g49UN06nXTj0LR0fUWwOCXhdxBzT7VvYMuiw16U/GuN2G63TnzDud/FFVwh7nLRqDWZvpchs
+      nLvA5cuvsRa1cZA2HquDxOr6OoWje9xN5YR6DIZjqoWTZVDRuvqwN6DdqlEo1TDs8wFlPKLb
+      bZM9zqMJO2CFQbfH0VGWyUQVvh1Ho+GDZdCxUOfBcEytmKPW7MxnX7tOoVhFF9k3GdHrdMhk
+      C6hC+1QG/T6pVGZu+3LpNJ3+aA77RtRKeaqN9kzZhQ2BiqnbpBsKQZ+P3d1NwUqJRj6bRpGd
+      REN+3J5Zq0YamcMDuiMF1Akr2xcJumeP1cejAUeHKUKxBH6fD4fduAM8Th8Rii3jdDiERzc1
+      ijlUd5Cg24nVavw2HXYbVLsqS+EAdptN4C8KqcMciZU4DoddcNN10kdpYstxHE6H4XgaIJdJ
+      E4zGTuwTbFg1SzkmzgBBjwubwL5Rr0WlNWIpGnrm9mWO0izNaV8+m8YfieEysG9hPYCi6CTX
+      VlmJLxlHg2pjGrUmiiahKwp2l8tAXmZ9e5dLFy9y8ZU9WpWy4QpTv9umVKnTa1W5e5AR6mzR
+      x9y6dZdsXhxWYLVbuH/rJoepjDBUwGKzcXx4n4P9Q8aqSBoa5Tz7hwdPnDo5jVGnwd39fcpz
+      HF9rZczN23fJ5MVhBVa7jf3bt+azz2rl+OiAg/1DRopIWqJZKbB/eEBzjlCWca/J3fv7lCoN
+      sc4o3Lp1h3TuS14GVScTfJEl2pUChVLFeBlUtuOQx2ioZI8LjIV1h1QO799j//4RktVieCpi
+      MBIjEQsyGI7wesWTVE8gzPJSiMlYFNEINoeb5EocVVWE3bgkW1ldTSKhoYulia+u4rKAYrCh
+      8xnh5Tghn5vxHJtmLn+Y+FIYZSK2z2p3kVyJo6mTue2T59jnBognV3FbJZQ5hENLcUIBD+OJ
+      KMYIXL4g8VjE0L6FOICmqthcHmKxGNFISPgD2uwOqtU2mxuJORQc0+1pJKIuDu+mqHVmvyV1
+      HVbXN9A1HbdLHFfj9gaIxZbpdcRBWnanm1gshjLoi9+QFjtLsRgOSaMvDIaTiSwtEY95KZfF
+      wXCBYJhYLEqzLn5Dur1+YrEYvfY89rnmtk+22FiKxXBZ9VO5vTOkCS8tsRzzUZnDPn8wzHJs
+      idYc9rke2NfvzP7ehawC2ZxOqqn71Mc6TruTYChg6AQWuwO7JGNx2LEIl/FcBHwymWKHi6/t
+      4jdIirnz6Yc0FTseu414VJROAa1mnYmqs7YuXi7td9q0h2NiyVXhjzoZD6jUWriCUfxTluZO
+      o1IpVbDabGyuigP46tUquiyzsSkOcW436oxVndUNsX2DTpvWcMzSHPYpkyGVagO7L0xAmKSk
+      Ui1VsNgsbK6GhXo0ahU0SWZjUxwO3Wk2GCqaYej0wuYAsqzRH4xR5wjo6rcatFpdSsWiMBgO
+      JjQaHUDC6fbiMNgc2bv8Jhe3k+jahKJgjKyMB1z9+FNarSapI9F8QeXGRx9TbbVIHaQEb0id
+      9N2bZPJljo9SdEfG0o3KMbduH9Gs58kLwqEHnSafXr9Ns1knkzUOb1AnQ65+/CnNVotUSmzf
+      zStXqbRapPZTiPqs7P5t0rkSuUyajqAHaFZz3Lx9SLNeICewb9ht8cm1WzSbDdLZvLHGyoir
+      Vz6h2WpxaGDfwvYBYuu7SLYcrYF40ifZndgdKg53CJ9gpQag1+/jCQSEqwKSbCEYXiIYjpA+
+      zKBGAlhm/I3F5uT1Ny6jajpLy6JNH5m9N15noKpYwkvCt8rqzgXc7T4W2YJ3xvr0ZwQiCS7t
+      WbHYrYTCfkNZpyfA5dcuoksyXr9xDydbHbz+xusomkZsWTQfkrnw+uv0NQVLOCpM+FnZ3MXR
+      7GKxWPEJEn784QSXLlqw2CwEBfY5PH4uv3YJXZLx+AT2Wexc/toD+2Kz7VtID9Ct5fnTn77H
+      8WGepc11w0Y1dcT+YZ6v/8o3kAdNBoarCBrdzoC1tSSWaaewP4FO5vA+t2/dwekPGuohSRLl
+      cgmrzYYsHIZJ9BoVRrrlRA+BrDrs0ewOhculcHLCeblcxWazCuP9JFmiXCpjs9mEv8Vn9lls
+      tpnVFR7Xud+sMFQtc53Mro0HNDoDrFaLaEsEWeaBfTbx5FqSKJdP7BPdEkmSqJZLyBab4TB6
+      IQ7gjSR48/IeTq+dfCpjGCym6yN67T4HBwd0Wl1GhkMmCZfbSSgaZ301MdcWerPdJ7m6SsDn
+      Fj4kboeNUrlMsy3OB3D7vdSKRWq1hjBc2O520W81KJerp4o3TUcGfUy5XD51osssbFYol8t0
+      ewOhrNtpo1wu02iJ8wE+s69aawhXdmxOJ4NOk3K5iiJcxbMgPbBvMId9dsuJE3Tmsc/loFwu
+      Uzewb0FzAAl/KMqlN77GasTHcGSwt2vx8a3vvM3e3h5vvP0mPkE4dKuW5b2ff8S9u7eoNkQ/
+      ikQ8FiKdyTIw0OEzrDY7E1VCHfWFsrIkMxwpWOV5Fv4kRu0eLr9zjvLyEpI6xqRLYakAAA8O
+      SURBVONx0OqKdbbbZZAc9Hs9oazNZmesnLyxhRpLMsPhBNu89jW7uIOuuZJcZF3B7XLQ7s6z
+      3Hxi36AnfilZrTbGio4+mb2/sLBJcLOS4/rNW+wfpozDUyUJdTIil8txnM2QyRlv0oSia7yy
+      t4k3sMRS2CgKE0CnVK4RDfsolsSVEFRVpZrPzrUBpUxUOs0apap4eU5TVIaDLpljca4xaIzH
+      Iw4O0nP0cKCoE7KpFMOJ+MFTVJVq4XiuDShlotBt1ykIQsPhZNl7OOyRzopzjUFn8sC+eVxL
+      VRWOj1IM5rSvVszR6Mx28IVNgtv1Fqs75ynev02nVYO12UFgvXqJgeZA6/WpdpusrSeYNZWS
+      ZJ1ytcm585uG4bEPpHE57TSbHTzCIC3wej3sXLzE6oq4CLDD42Xn3A7J5KpwkmhxONk4v8tS
+      IjFHBKZENLHOZjhKLCKOwPR6wrzyxhorCeOAPDix79zeJZLJhFD2xL5tVuaxz+5g48Iu0fgK
+      Ppeo6oVEeHmVtVCEWMR4Egzg8YS4+PrKXMGMXo+Hc3sXSSZn37+F9QDJ7W1Kh3dwhZbY3jBe
+      w/VFYozbVcaynY2NpOAHt6CrA9LptHDTpdVq4w8Ecbk9eD3iTPdgZIlRu8InN+4IZd2+AHbG
+      XPnoqnCZ0GpzEfTZ+eSjK3NUhbAQWwqSunON46q4248uxajmU9w5OBbKBsJRxt0qV6+L7XN5
+      AzgkhSsfiu2z2JyE/E6uXbkiXAYFmdhSiKO718nOsREWXVqiXkhze18cyuIPR5n06nz86a2Z
+      MgutC6TbnKCqeHzG+biT0RAdCYsssxSPC7xUIrm2Rr9VpjVQMApTDwR8VCcqm/E41Zrxjz0a
+      9EgfHeEKLhP3G7+Z1MmI42yGEQ4uXtwVBvqVC1mqrRGvvHoJp2GvpdNqVEhnymydv0ggYBxJ
+      2+u0OUpniK1u4fcZ6zwa9Mmkj3D6Y5z3G98PVRmTy2QY6nYuXTovuB8alcIx5eaAS69ewm04
+      h9NpNaqkMyU2dy/iDxgPYfvdDkdHaaIrm/gF92Q87JM+OsLui3IhOVt2YT2AxQq93nCuGA51
+      PECR7ITDoZnr9I+jTCboFisWQQJ2r1XnykdXuHnz1kkEqYB6s4PbYePwUHwMVLtaw+7xkDlM
+      CVeBRp02mtVGJZedQw+Vfn+MPqyTzotDFjqdHlZJJZU27gEkCeqNNi6njdRhylAWoFOtYntg
+      n7AuUK+LJlmpFY5pDYzvtyQ9sG/UIJ0XB/C1Oz3sFm2OzTtoNNq4nHbD+7cQBxgPB7jDCZLL
+      EYIBcTUGh3+JjUQEu10USgtgQdcmjFUrSxHj7/YEwuzsbHPx4nkk1fjBc7g8bK8nqFSreAWb
+      Lhabg53zO3RqFWxuj2B/QSa5vYM06jGRrDgFq1yB0DIhv416e0QkZLxh5fH5WYmFqdUbBILG
+      OtudbrY3VqhWq3j8xhX1LFY723vn6FQrWF1uwZBUJrGxhaz0GWHBbbiRKeEPLhMO2Ki3hoRD
+      xnMct9dHcjlMtdbAHzIOC7E73exsJalVq3h8s+1biANYLFYmwxGBcBhJU43rAj0Ih262WjTq
+      DUFlOIAhjbbKdtJPKita2ZHQJj3u3r2PLtjQ0XUdp8eHNh5htYsmcjpYHTglDcvDso6zZVVN
+      IuBzomni3k1VFAKhIKOxhmjfTNc0PP4A4+H4ZOPMSFbXcXi86JOxsEIG6GBx4LboWKwi+0DV
+      Ieh3oyoIN+9O7AsxGmsYvgsAXdNP7BuNsM9hn93lBYF9i3EAm8TNK1e4u79PtlAxlJVkG7Xc
+      IeVmh2qpKKgqAODA41TZz9RZWzEOptJ12NzeQdd0nA7jIK3i0V2uXLuLqsqsrhqnLfYaRd57
+      /wr9zoj45rrhG1LXx/zsxz+lr0zweKM4DZ9qjSvv/4JSs4Pd7iUgmLjfvf4x99JFkG3Eo8Zv
+      yFL6Ph99cgdlAqtrxqtA/WaZn7/3If3uiOWNNUEPMOLnf/oufXWM2xXGZfhUa1z94D0K9TY2
+      u4eg13iOc//GVe6k8uiSjcSS8b2uZPf54JNbTMY6q+uzV4EWlhHWbdYo1ZrIVicbG0kDz9Pp
+      tRq0hwo2q5WQcB4w5Nqnafa2faSqdi5szU4wv/3JBw+jQS9ffkWos6ZOONzfx+IOsiV4SHRd
+      I5dO0Z3I7O5uCR4SnVopT6HS5tzeeYETnMxdjrJ5kpvnCHqNnWA87HF4eERgaYXEkrETaOqE
+      1MEBkivA9hz25TNHtEdw/vy20L56uUC+3OLchfOCYd5JEdujTI6VjR1CPmMnmIz6HBym8EcS
+      rMSMnUBTFY4O9tGdfnZmOMHCHOD4/i3syyfVoR1Oh3FZlHKOTHNE2OdhaTkmqGygc3jvDkNF
+      Y2NnD49BcJmuqTTrNdLZHPG1rblCouH5VoWotMasJuasCnFQYHNnvqoQ6VSG5LxVIY4z+KIJ
+      PMJK1U9fFaLUGLC2It6TAIXUQY6NnY05hiU6mVSaxMbTVIVI4J1i38KWQf2RCNnjNB2Xh60t
+      45todzvoHpWQlAnh2BJWQ+kR3YHMhS0/R/kmF7ZmVxaQZAuhaIxQdJ4bArlMik5vgNMXJi54
+      +JvlPLlaC5vVyc6u8SbNuNfiXuoYWbayc/6cQAuVW9dugtXKyvq24OHXObx3l5GiEVpKCB/+
+      fCZFuzfA4Q0RFzz87UqBTLWJzerk3K7x7zcedLh3kEaWbWzviu27ff0musVKYm1L8PDrpO7f
+      ZahoBCNx4cNfyB7R7PZxeIIsz7BvYcugNrsTn9dDuyVeyrPYPazEo8jyPAUPnSRibvaPO6wn
+      xecDPA2tZotAKIzfKwqxODkhxuryEwwaJ/sAqJMBCraTZV7hG/okjyIcDuMQzRKBTrdHKBye
+      K+Ot1WrjD4Xxz5Ee+pl9oaBfaJ82GTLRrXPb13to3xx1iTo9QqEwHrd4I7PdbuMPhgn4vuRw
+      aAAenNCnq6r4BBWbg8TKCnZNEYZD5zIpqs0m9VrbMB/4i7C5tUmpUECdIxc3klhH7VQZTsQ5
+      wQ5fBJ9dodUdIHZxCyvxMOV6S5jvALC+tkKhWD6JMxawubVBpVBAGI8HhBLr6N3qqeNnZ2H3
+      BAk4dFrd/lzL2Ml4hHKtOUfYOWysJ0/sm+OsufXNDaqlAkbrKIvrAWw2hv0eifUN4bhLnYw5
+      OtxH9wTxCxJilAfJ37LFMket/afjKHXEufPnOU4fCWWruTSB5DaNQk64UTRsVRlb/FhGrTk2
+      whSK1S4bERvpOY5IyhwX2d1eJX0kDoU4SqXZPn+eXCYtlK3n0njjWzRLeaF9o06dgeTBNunQ
+      FmyEgUKh0mEj5pxrIyyTLXB+Z50jYZYeZFJpNs+dJ5+dbd/CHCCfOiSytkMtlxHGkox7TQaa
+      lX69TM8w6k9mY2eXixdf5WuvnUOdoxT30xCNhMhmMvhD4lxVfyRKvZDF5vULg8XsHj/qoElf
+      twpCBQCseFwSx5UuS3MEw4UCHrLHBcIRsc4P7ROdAAj4IlGapWOsHp/wBWZ3+2HUoqda8Aj3
+      UKx4XTLHpbZwIxMgFPSSOc4TjoiqyEEkEiKXzeALzLZvYZPgpUSc/cN72Lx+YaNWuxNtXEGT
+      LNjm6BZBwm2w2/dF6LZaWF1uXBMdp6Ca3bDXZYIVn8eNxerAqFi7rk9od0b4vV40LIIRkEar
+      1cbr9TPRdOFGUavVxuX2osljXIbFfB/Y53TjHms4BPaN+j3GumUu+2BCqz3E5/WhISNJxkdc
+      tVptPF4/E028EXZinwdVGuMyLOYLvVYLi9OF26XicM22b2E9QLVYYuP8RaTRQNgDKKMRsdUt
+      EuEAk2f8Vp8XbyDAeKSyubmJPjHOB3B6vKiDESubmzhkDOc4kmTDaZMILCUI+5yChBGZQMCF
+      xeZjY22JTts4cSUQ8KPqFjY21hgNjGW9gQCjkcLG5iYoxokoDrcH7YF9ToF9YMPtkPBH4kQD
+      bkYTowGTRCDgxmLzsrEWo2sQtw8n9imazMbGOuOBcZKSJxBgPHxgnzp7GLawHiCaiLN/7zYO
+      l1fYqM3ppLyfQtclLiUXfpY3AMq4z81r16nVazg8ot5F5f6tmzjqNeyyg6hh+oBO7ug+5ZEV
+      n9PBhUvGXXm9nOP6tWNqKwHim3uGsv12nevXrlOrxwlEjDe21MngoX12tygOX+X+7ZvY6zVs
+      kp2IID0ilz6g0NHxe5zsXjQeXjUqea5fS1NbCbK8ccFQdtBpPrAvgT9svDuvKkNuXbtOpV7D
+      7vIx69ew/O7v/u7vGn7TM6J4lCJ27iKdUp5gLGbY9QzbDSz+GF5ZwerxYxcetPbskS02FFVl
+      7+IejUpFMKaWsUoasc3zKJ0G/ojRQXISTrsFRyBGwKYhubw4DHaCXR4PqipzfitKqa4SMgiJ
+      tjlcqKrG3vkdKpU64fDsjT7ZYkNVVc7v7dGsiu2zoxHd2EXrNvFGwobzHJfdit0XJeyU0Gwe
+      XAaVp10e94l92zHK9YnAPieqqrJ3YZdKpWpsn2xF01R29/Zo1aoz7VvYkxXfWKdwcBdXMCKc
+      JDrcXqq5I8qt/pfy8H+Gz23j9u07YBWvOXsDPtL37tBXdOGP6nB7qRcyFJtdw4f/BCvquMXd
+      gxyBoHg/wiar3Ll7H4dHPGH2e+zcuXMH3SreM/AG/aTv36U70cSTfJeHZjlLvt42fPhPsKJN
+      OtzdzwrzAQDsFp07d+5hd4v3LnweB3du30GzzJ4vLOiQvDHFUoVOrU5nOBRGS2qylZDfhabN
+      dxba80DXdbyBIPpkjCx8SHUsDjdui45ksQjt0yUL4YAbVdERHamnKiqRaITRWMNiOKE8iZYM
+      hsOMx2Ph8aS6ruPxB2EyRhaWOtGRHW681pPddNE90SQL4aAXVRHfP01VCUcjjOexT9cJhMJM
+      xmOsc0Tzun0BZHViaN9CHGDUa1Gptxn1BsTXVgV1gYa8+6Of0BuP8fuXDE+HeZ4UUnf54Oot
+      FEUWRkv2GkV+9t6H9NojEnNEg/70Rz+hNxnPGQ36cwqNNna7TxgId/f6FW4f5pFkuzAQrpS+
+      zy8/voEykQyjJeEkGvTdn/2S3pzRoO/+6Cf0lDGuOaJBP37/PXLVJja7VxgId//6VW4dZNFl
+      mzAQrpLd5/2PbzAe6axuJGfK/f9wsC0WBvmTdAAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Price-Lineplot' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
