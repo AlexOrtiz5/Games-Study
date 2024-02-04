@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS game (
     required_age FLOAT,
     price FLOAT,
     dlc_count FLOAT,
-    about_the_game VARCHAR(1000),
+    -- about_the_game VARCHAR(1000),
     reviews VARCHAR(1000),
     header_image VARCHAR(1000),
     website VARCHAR(1000),
