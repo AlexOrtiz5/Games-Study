@@ -1,0 +1,6 @@
+Python: 3.11.7
+Pandas: 1.5.3
+PyCaret: 3.2.0
+Matplotlib: 3.6.0
+Scikit-Learn: 1.2.2 
+Seaborn: 0.13.2 
