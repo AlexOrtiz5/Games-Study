@@ -1,9 +1,7 @@
 # Game Insights: Analyzing Popularity, Platforms, and User Feedback
 
-  Project status(Active, On-Hold, Completed)
+  Project status(Completed)
 # Project objective
-
-  Paragraph with introduction/ objective of project
 
   The aim of this project is to perform a thorough study of a gaming dataset that includes user reviews, platform accessibility, metacritic scores, game popularity, and more. Finding patterns, correlations, and insights in the data that can help the gaming business make decisions is the main objective.
   
@@ -87,8 +85,6 @@
 
 # Project Description
 
-  Paragraph with a description of the dataset, sources, characteristics ,etc.
-
   The focus of this research is a large gaming dataset that includes a variety of data pertaining to multiple games. Critical attributes like "AppID," "Name," "Release date," "Estimated owners," "Peak CCU," "Price," "Metacritic score," "User score," and more are included in the dataset. These features provide an in-depth look at the features, player engagement data, and important feedback indicators of every game.
 
   The sources of the dataset could include user reviews, Metacritic scores, gaming platforms, and other sites that support the gaming industry. The collection includes both qualitative and quantitative features, such as game categories, genres, and tags, in addition to quantitative parameters like estimated ownership, peak concurrent users, cost, and review scores.
@@ -103,10 +99,58 @@
   Owing to its extensive scope, the dataset is a useful tool for performing various analysis aimed at identifying patterns, correlations, and trends in the gaming sector. Through the usage of these traits, the project hopes to learn more about user preferences, game popularity, and the effects of different features on a game's overall success.
 
 # Steps
-  Add here any insights you had during the project
+
+  ## Data Profiling Challenges: 
+  Text-based columns presented difficulties for the ydata_profiling data profiling phase, which resulted in the rejection of some features from the study. Understanding the many data types and formats that profiling tools offer is crucial.
+
+  1. To begin analysis, get the dataset from [Kaggle Dataset](https://www.kaggle.com/datasets/fronkongames/steam-games-dataset?select=games.csv).
+  2. Open the `analyze.ipynb` notebook after downloading.
+  3. Examine the dataset and note the kinds and quantity of columns.
+  4. Create an HTML report by using `ydata_profiling` to profile data.
+  5. Remove nine text-based columns because the profiling didn't function with them out of a total of 39 columns.
+  6. Store the profiling report in the file named `resources`.
+
+  ## Data Cleaning and Transformation: 
+  Managing missing values, modifying column types, and standardizing column names were all part of the data cleaning procedure. In order to prepare the data for analysis and modeling, several steps are essential.
+
+  1. To clean the data, open the `clean_data.ipynb` notebook.
+  2. Modify column types, handle object columns, and use techniques to fill in missing values.
+  3. Change the column names to lowercase and eliminate spaces.
+  4. To facilitate MySQL import, divide the data into distinct CSV files.
+
+  ## SQL Integration: 
+  The steam_games.sql script's usage of SQL points to a relational database strategy. This improves data management overall by enabling effective data storage, retrieval, and querying.
+
+  1. Run the `data/sql` folder's `steam_games.sql` file.
+  2. For notebooks after this one, this step is required. Use other data for modeling and assumptions if SQL is skipped.
+  3. To import cleaned data into SQL for more effective queries, go to `import_sql.ipynb`.
+
+  ## Testing of Hypotheses: 
+  Seven hypotheses pertaining to various facets of the data are being tested for this project. The knowledge gathered from these tests may be quite helpful in identifying patterns and relationships in the dataset.
+
+  1. To test your hypothesis, go to `hypothesis_testing.ipynb`.
+  2. Using graphs and tests, demonstrate seven distinct hypotheses for each category of data examined.
+
+  ## PyCaret-Based Data Modeling: 
+  Using PyCaret to model data indicates a desire to automate the process of machine learning. This can facilitate faster decision-making by accelerating the training and evaluation of numerous models.
+
+  1. For data modeling, visit `data_modeling.ipynb`.
+  2. Examine the prediction models that PyCaret generated for every hypothesis.
+  3. Examine the `data/model` file's prediction error graphs, training data kinds, and model saving.
+
+  ## Tableau Visualization: 
+  Making powerful and engaging visual representations of the data is the emphasis of using Tableau for visualization. These visuals can help explain difficult concepts to a larger audience.
+
+  1. Look in the `presentation/tableau` folder for Tableau graphics.
+  2. Alternatively, navigate to the Visualization section below to see the Tableau dashboard.
+
+  ## Data Exploration App: 
+  The creation of an app that allows users to explore data in one location suggests that accessibility and user-friendly interaction are priorities. Stakeholders who might not be familiar with data analysis tools may find this useful.
+
+  1. Use the app to view all data in one location and look through the `src` folder to see data presentation and test models.
+  2. Alternatively, navigate to the Visualization section below to examine the streamlit app.
 
 # Conclusion
-  Final conclusion
 
   To sum up, this project explores a wealth of gaming data and provides a comprehensive viewpoint on a variety of gaming-related topics. We investigated connections, patterns, and trends across a range of dimensions through thorough studies, illuminating important variables affecting player engagement, user happiness, and game popularity.
 
@@ -121,5 +165,9 @@
 
   For everyone involved in the gaming industry, from publishers and developers to analysts and enthusiasts, this initiative offers insightful information. Comprehending the factors that drive game success can help make better strategic choices, improve user experiences, and support the ongoing development of the gaming industry.
   
-# Contact
-  linkedin, github, medium, etc 
+# Presentation and Visualization
+
+  - **PowerPoint**: Locanted on the presentation folder
+  - **Tableau**: [Games Study Dashboard](https://public.tableau.com/views/Games_tableau/Games?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)  
+  - **Streamlit**: [Games Study Webpage]()
+  
