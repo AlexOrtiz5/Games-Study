@@ -27,7 +27,7 @@ for csv_file in csv_order:
     else:
         game_data = pd.merge(game_data, df, on='appid', how='outer')
 
-st.header("Data Analisis:")  
+st.header("Game Insights: Analyzing Popularity, Platforms, and User Feedback")  
 
 st.subheader("Data used for the analisis")      
 st.write(game_data)
@@ -97,7 +97,19 @@ if st.sidebar.checkbox('Hypothesis 1: Game Popularity vs. Features', True):
 
     with col2:
         st.pyplot(no_heatmap_fig)
+    # Calculate Pearson correlation coefficient and p-value
+    correlation, p_value = pearsonr(games_data_no_outliers['estimated_owners'], games_data_no_outliers['peak_ccu'])
+    st.subheader(f'Pearson Correlation Coefficient and P-Value')
+    st.write(f'The Pearson Correlation Coefficient is: {correlation}')
+    st.write(f'The Pearson P-Value is: {p_value}')
 
+    # Check for statistical significance
+    st.subheader("Hypothesis Testing")
+    if p_value < 0.05:
+        st.write("Reject the null hypothesis as a result. A notable association exists.")
+    else:
+        st.write("Consequently, the null hypothesis is not rejected. Not a very strong link.")
+        
     # Load the pickled model
     model_path = '../data/model/hypothesis1'
     games_model = load_model(model_path)
@@ -139,7 +151,7 @@ if st.sidebar.checkbox('Hypothesis 1: Game Popularity vs. Features', True):
     # Display the interpretation instead of the raw number
     st.subheader("Interpretation of Predicted Peak Concurrent Users:")
     st.write(interpret_prediction(predicted_peak_ccu[0]))
-    st.write(predicted_peak_ccu[0])
+    st.write('Number predicted: ', predicted_peak_ccu[0].round(2))
 
     # # Scatter plot
     # scatter_fig, scatter_ax = plt.subplots(figsize=(8, 6))
@@ -154,19 +166,6 @@ if st.sidebar.checkbox('Hypothesis 1: Game Popularity vs. Features', True):
     # # Display the plot
     # st.subheader("Scatter Plot with User Input and Prediction")
     # st.pyplot(scatter_fig)
-
-    # Calculate Pearson correlation coefficient and p-value
-    correlation, p_value = pearsonr(games_data_no_outliers['estimated_owners'], games_data_no_outliers['peak_ccu'])
-    st.subheader(f'Pearson Correlation Coefficient and P-Value')
-    st.write(f'The Pearson Correlation Coefficient is: {correlation}')
-    st.write(f'The Pearson P-Value is: {p_value}')
-
-    # Check for statistical significance
-    st.subheader("Hypothesis Testing")
-    if p_value < 0.05:
-        st.write("Reject the null hypothesis as a result. A notable association exists.")
-    else:
-        st.write("Consequently, the null hypothesis is not rejected. Not a very strong link.")
 ##################################################################################################################################
 # Impact of Platforms on Game Adoption
 if st.sidebar.checkbox('Hypothesis 2: Impact of Platforms on Game Adoption', False):
@@ -215,7 +214,24 @@ if st.sidebar.checkbox('Hypothesis 2: Impact of Platforms on Game Adoption', Fal
     countplot_ax.set_xlabel('Multiple Platforms')
     countplot_ax.set_ylabel('Estimated Owners')
     st.pyplot(no_countplot_fig)
+    
+    # T-test for Windows vs. Multiple Platforms
+    t_statistic, p_value_ttest = ttest_ind(platform_df_no_outliers['estimated_owners'][platform_df_no_outliers['windows'].eq(1)],
+                            platform_df_no_outliers['estimated_owners'][platform_df_no_outliers['platform'].eq(True)],
+                            equal_var=False)  # Assuming unequal variances
 
+    # Display T-test results
+    st.subheader("T-test Results: Windows vs. Multiple Platforms")
+    st.write(f'The T-statistic is: {t_statistic}')
+    st.write(f'The P-Value for the T-test is: {p_value_ttest}')
+
+    # Check for statistical significance
+    st.subheader("Hypothesis Testing")
+    if p_value_ttest < 0.05:
+        st.write("Reject the null hypothesis as a result. The player base on Windows and Multiple Platforms differs significantly.")
+    else:
+        st.write("Consequently, the null hypothesis is not rejected. There isn't much of a player base difference between Windows and several platforms.")
+        
     # Load the pickled model
     model_path = '../data/model/hypothesis2'
     platform_model = load_model(model_path)
@@ -262,7 +278,7 @@ if st.sidebar.checkbox('Hypothesis 2: Impact of Platforms on Game Adoption', Fal
     # Display the interpretation instead of the raw number
     st.subheader("Interpretation of Predicted Platform Adoption:")
     st.write(interpret_platform_prediction(predicted_platform[0]))
-    st.write(predicted_platform[0])
+    st.write('Number predicted: ',predicted_platform[0].round(2))
 
     # # Bar Plot for Predicted Platform Adoption
     # predicted_platform_fig, predicted_platform_ax = plt.subplots(figsize=(8, 6))
@@ -274,23 +290,6 @@ if st.sidebar.checkbox('Hypothesis 2: Impact of Platforms on Game Adoption', Fal
     # # Display the plot
     # st.subheader("Bar Plot for Predicted Platform Adoption")
     # st.pyplot(predicted_platform_fig)
-
-    # T-test for Windows vs. Multiple Platforms
-    t_statistic, p_value_ttest = ttest_ind(platform_df_no_outliers['estimated_owners'][platform_df_no_outliers['windows'].eq(1)],
-                            platform_df_no_outliers['estimated_owners'][platform_df_no_outliers['platform'].eq(True)],
-                            equal_var=False)  # Assuming unequal variances
-
-    # Display T-test results
-    st.subheader("T-test Results: Windows vs. Multiple Platforms")
-    st.write(f'The T-statistic is: {t_statistic}')
-    st.write(f'The P-Value for the T-test is: {p_value_ttest}')
-
-    # Check for statistical significance
-    st.subheader("Hypothesis Testing")
-    if p_value_ttest < 0.05:
-        st.write("Reject the null hypothesis as a result. The player base on Windows and Multiple Platforms differs significantly.")
-    else:
-        st.write("Consequently, the null hypothesis is not rejected. There isn't much of a player base difference between Windows and several platforms.")
 ##################################################################################################################################
 # Metacritic Score and User Feedback
 if st.sidebar.checkbox('Hypothesis 3: Metacritic Score and User Feedback', False):
@@ -352,6 +351,19 @@ if st.sidebar.checkbox('Hypothesis 3: Metacritic Score and User Feedback', False
     with col2:
         st.pyplot(no_jointplot_fig)
         
+    # Calculate Spearman correlation coefficient and p-value
+    correlation, p_value = spearmanr(user_score_df_no_outliers['metacritic_score'], user_score_df_no_outliers['user_score'])
+    st.subheader("Spearman Correlation Coefficient and Hypothesis Testing")
+    st.write(f'The Spearman Correlation Coefficient is: {correlation}')
+    st.write(f'The Spearman P-Value is: {p_value}')
+
+    # Check for statistical significance
+    st.subheader("Hypothesis Testing")
+    if p_value < 0.05:
+        st.write("Reject the null hypothesis as a result. A notable positive association is present.")
+    else:
+        st.write("Consequently, the null hypothesis is not rejected. Not a very strong link.")  
+              
     # Load the pickled model
     model_path = '../data/model/hypothesis3'
     user_score_model = load_model(model_path)
@@ -392,7 +404,7 @@ if st.sidebar.checkbox('Hypothesis 3: Metacritic Score and User Feedback', False
     # Display the interpretation instead of the raw number
     st.subheader("Interpretation of Predicted User Score:")
     st.write(interpret_user_score_prediction(predicted_user_score[0]))
-    st.write(predicted_user_score[0])
+    st.write('Number predicted: ',predicted_user_score[0].round(2))
 
     # # Plotting
     # scatter_fig, scatter_ax = plt.subplots(figsize=(8, 6))
@@ -410,19 +422,6 @@ if st.sidebar.checkbox('Hypothesis 3: Metacritic Score and User Feedback', False
     # # Display the plot
     # st.subheader("Scatter Plot with User Input and Prediction")
     # st.pyplot(scatter_fig)
-
-    # Calculate Spearman correlation coefficient and p-value
-    correlation, p_value = spearmanr(user_score_df_no_outliers['metacritic_score'], user_score_df_no_outliers['user_score'])
-    st.subheader("Spearman Correlation Coefficient and Hypothesis Testing")
-    st.write(f'The Spearman Correlation Coefficient is: {correlation}')
-    st.write(f'The Spearman P-Value is: {p_value}')
-
-    # Check for statistical significance
-    st.subheader("Hypothesis Testing")
-    if p_value < 0.05:
-        st.write("Reject the null hypothesis as a result. A notable positive association is present.")
-    else:
-        st.write("Consequently, the null hypothesis is not rejected. Not a very strong link.")
 ##################################################################################################################################
 # Effect of Game Features on Reviews
 if st.sidebar.checkbox('Hypothesis 4: Effect of Game Features on Reviews', False):
@@ -498,6 +497,19 @@ if st.sidebar.checkbox('Hypothesis 4: Effect of Game Features on Reviews', False
     with col2:
         st.pyplot(no_bar_fig)
         
+    # Calculate Pearson correlation coefficient and p-value
+    st.subheader("Pearson Correlation Coefficient and Hypothesis Testing")
+    correlation, p_value = pearsonr(feedback_df_no_outliers['positive'], feedback_df_no_outliers['achievements'])
+    st.write(f'The Pearson Correlation Coefficient is: {correlation}')
+    st.write(f'The Pearson P-Value is: {p_value}')
+
+    # Check for statistical significance
+    st.subheader("Hypothesis Testing")
+    if p_value < 0.05:
+        st.write("The null hypothesis is rejected. A noteworthy link exists.")
+    else:
+        st.write("The null hypothesis is not successfully rejected. Not a big relationship.")   
+             
     # Load the pickled model
     model_path = '../data/model/hypothesis4'
     feedback_model = load_model(model_path)
@@ -537,7 +549,7 @@ if st.sidebar.checkbox('Hypothesis 4: Effect of Game Features on Reviews', False
     # Display the interpretation instead of the raw number
     st.subheader("Interpretation of Predicted Feedback:")
     st.write(interpret_feedback_prediction(predicted_feedback[0]))
-    st.write(predicted_feedback[0])
+    st.write('Number predicted: ',predicted_feedback[0].round(2))
 
     # # Bar Plot for Mean Achievements by Review Type
     # review_types = ['Positive', 'Negative']
@@ -558,19 +570,6 @@ if st.sidebar.checkbox('Hypothesis 4: Effect of Game Features on Reviews', False
     # # Display the plot
     # st.subheader("Bar Plot with User Input and Prediction")
     # st.pyplot(bar_fig)
-
-    # Calculate Pearson correlation coefficient and p-value
-    st.subheader("Pearson Correlation Coefficient and Hypothesis Testing")
-    correlation, p_value = pearsonr(feedback_df_no_outliers['positive'], feedback_df_no_outliers['achievements'])
-    st.write(f'The Pearson Correlation Coefficient is: {correlation}')
-    st.write(f'The Pearson P-Value is: {p_value}')
-
-    # Check for statistical significance
-    st.subheader("Hypothesis Testing")
-    if p_value < 0.05:
-        st.write("The null hypothesis is rejected. A noteworthy link exists.")
-    else:
-        st.write("The null hypothesis is not successfully rejected. Not a big relationship.")
 ##################################################################################################################################
 # Playtime Patterns
 if st.sidebar.checkbox('Hypothesis 5: Playtime Patterns', False):
@@ -602,7 +601,20 @@ if st.sidebar.checkbox('Hypothesis 5: Playtime Patterns', False):
     boxplot_ax.set_title('Box Plot of Playtime Metrics')
     boxplot_ax.set_ylabel('Playtime (minutes)')
     st.pyplot(no_boxplot_fig)
+    
+    # Perform Pearson correlation test and P_value
+    st.subheader("Pearson Correlation Coefficient and Hypothesis Testing")
+    correlation, p_value = pearsonr(playtime_df_no_outliers['average_playtime_forever'], playtime_df_no_outliers['median_playtime_forever'])
+    st.write(f'The Pearson Correlation Coefficient is: {correlation}')
+    st.write(f'The Pearson P-Value is: {p_value}')
 
+    # Check for statistical significance
+    st.subheader("Hypothesis Testing")
+    if p_value < 0.05:
+        st.write("Dismiss the null hypothesis. A noteworthy link exists.")
+    else:
+        st.write("Reject the null hypothesis ineffectively. Not a big relationship.")
+        
     # Load the pickled model
     model_path = '../data/model/hypothesis5'
     playtime_model = load_model(model_path)
@@ -644,7 +656,7 @@ if st.sidebar.checkbox('Hypothesis 5: Playtime Patterns', False):
     # Display the interpretation instead of the raw number
     st.subheader("Interpretation of Predicted Playtime:")
     st.write(interpret_playtime_prediction(predicted_playtime[0]))
-    st.write(predicted_playtime[0])
+    st.write('Number predicted: ',predicted_playtime[0].round(2))
 
     # # Box Plot
     # boxplot_fig, boxplot_ax = plt.subplots(figsize=(8, 6))
@@ -660,19 +672,6 @@ if st.sidebar.checkbox('Hypothesis 5: Playtime Patterns', False):
     # # Display the plot
     # st.subheader("Box Plot with User Input and Prediction")
     # st.pyplot(boxplot_fig)
-
-    # Perform Pearson correlation test and P_value
-    st.subheader("Pearson Correlation Coefficient and Hypothesis Testing")
-    correlation, p_value = pearsonr(playtime_df_no_outliers['average_playtime_forever'], playtime_df_no_outliers['median_playtime_forever'])
-    st.write(f'The Pearson Correlation Coefficient is: {correlation}')
-    st.write(f'The Pearson P-Value is: {p_value}')
-
-    # Check for statistical significance
-    st.subheader("Hypothesis Testing")
-    if p_value < 0.05:
-        st.write("Dismiss the null hypothesis. A noteworthy link exists.")
-    else:
-        st.write("Reject the null hypothesis ineffectively. Not a big relationship.")
 ##################################################################################################################################
 # Price Influence
 if st.sidebar.checkbox('Hypothesis 6: Price Influence', False):
@@ -715,7 +714,20 @@ if st.sidebar.checkbox('Hypothesis 6: Price Influence', False):
     scatter_ax.set_ylabel('User Score')
     scatter_ax.grid(True)
     st.pyplot(scatter_fig)
+    
+    # Calculate the correlation coefficient and p-value
+    st.subheader("Pearson Correlation Coefficient and Hypothesis Testing")
+    correlation, p_value = pearsonr(price_df_no_outliers['price'], price_df_no_outliers['user_score'])
+    st.write(f'The Pearson Correlation Coefficient is: {correlation}')
+    st.write(f'The Pearson P-Value is: {p_value}')
 
+    # Check for statistical significance
+    st.subheader("Hypothesis Testing")
+    if p_value < 0.05:
+        st.write("The null hypothesis is rejected. A notable association exists.")
+    else:
+        st.write("The null hypothesis is not successfully rejected. Not a very strong link.")
+        
     # Load the pickled model
     model_path = '../data/model/hypothesis6'
     price_model = load_model(model_path)
@@ -755,7 +767,7 @@ if st.sidebar.checkbox('Hypothesis 6: Price Influence', False):
     # Display the interpretation instead of the raw number
     st.subheader("Interpretation of Predicted User Score:")
     st.write(interpret_user_score_prediction(predicted_user_score[0]))
-    st.write(predicted_user_score[0])
+    st.write('Number predicted: ',predicted_user_score[0].round(2))
 
     # # Scatter plot
     # scatter_fig, scatter_ax = plt.subplots(figsize=(10, 6))
@@ -773,19 +785,6 @@ if st.sidebar.checkbox('Hypothesis 6: Price Influence', False):
     # # Display the plot
     # st.subheader("Scatter Plot with User Input and Prediction")
     # st.pyplot(scatter_fig)
-
-    # Calculate the correlation coefficient and p-value
-    st.subheader("Pearson Correlation Coefficient and Hypothesis Testing")
-    correlation, p_value = pearsonr(price_df_no_outliers['price'], price_df_no_outliers['user_score'])
-    st.write(f'The Pearson Correlation Coefficient is: {correlation}')
-    st.write(f'The Pearson P-Value is: {p_value}')
-
-    # Check for statistical significance
-    st.subheader("Hypothesis Testing")
-    if p_value < 0.05:
-        st.write("The null hypothesis is rejected. A notable association exists.")
-    else:
-        st.write("The null hypothesis is not successfully rejected. Not a very strong link.")
 ##################################################################################################################################
 # Categorization Impact on Popularity
 if st.sidebar.checkbox('Hypothesis 7: Categorization Impact on Popularity', False):
@@ -840,7 +839,20 @@ if st.sidebar.checkbox('Hypothesis 7: Categorization Impact on Popularity', Fals
     scatter_ax.set_xlabel('Number of Categories/Genres')
     scatter_ax.set_ylabel('Estimated Owners')
     st.pyplot(no_scatter_fig)
+    
+    # Calculate the Correlation Coefficient and the P_Values
+    st.subheader("Pearson Correlation Coefficient and Hypothesis Testing")
+    correlation, p_value = pearsonr(category_df_no_outliers['num_categories_genres'], category_df_no_outliers['estimated_owners'])
+    st.write(f'The Pearson Correlation Coefficient is: {correlation}')
+    st.write(f'The Pearson P-Value is: {p_value}')
 
+    # Check for statistical significance
+    st.subheader("Hypothesis Testing")
+    if p_value < 0.05:
+        st.write("Dismiss the null hypothesis. There's a noteworthy association.")
+    else:
+        st.write("Reject the null hypothesis ineffectively. Not a very strong link.")
+        
     # Load the pickled model
     model_path = '../data/model/hypothesis7'
     category_model = load_model(model_path)
@@ -886,7 +898,7 @@ if st.sidebar.checkbox('Hypothesis 7: Categorization Impact on Popularity', Fals
     # Display the interpretation instead of the raw number
     st.subheader("Interpretation of Predicted Estimated Owners:")
     st.write(interpret_estimated_owners_prediction(predicted_owners[0]))
-    st.write(predicted_owners[0])
+    st.write('Number predicted: ',predicted_owners[0].round(2))
 
     # # Scatter plot
     # scatter_fig, scatter_ax = plt.subplots(figsize=(10, 6))
@@ -903,27 +915,14 @@ if st.sidebar.checkbox('Hypothesis 7: Categorization Impact on Popularity', Fals
     # # Display the plot
     # st.subheader("Scatter Plot with User Input and Prediction")
     # st.pyplot(scatter_fig)
-
-    # Calculate the Correlation Coefficient and the P_Values
-    st.subheader("Pearson Correlation Coefficient and Hypothesis Testing")
-    correlation, p_value = pearsonr(category_df_no_outliers['num_categories_genres'], category_df_no_outliers['estimated_owners'])
-    st.write(f'The Pearson Correlation Coefficient is: {correlation}')
-    st.write(f'The Pearson P-Value is: {p_value}')
-
-    # Check for statistical significance
-    st.subheader("Hypothesis Testing")
-    if p_value < 0.05:
-        st.write("Dismiss the null hypothesis. There's a noteworthy association.")
-    else:
-        st.write("Reject the null hypothesis ineffectively. Not a very strong link.")
 ##################################################################################################################################
 # Tableau Public URL
 tableau_url = """
-https://public.tableau.com/views/Games_tableau/Games?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link
+<div class='tableauPlaceholder' id='viz1707229569152' style='position: relative'><noscript><a href='#'><img alt='Games ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ga&#47;Games_tableau&#47;Games&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Games_tableau&#47;Games' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ga&#47;Games_tableau&#47;Games&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1707229569152');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='1177px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 """
 
 # Header for the Tableau Public link section
 st.header("Tableau Public Visualization")
 
 # Embed the Tableau Public link using an IFrame
-# st.components.v1.iframe(tableau_url, height=600, scrolling=True)
+st.components.v1.html(tableau_url, height=845, width= 1020, scrolling=True)
