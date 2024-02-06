@@ -169,5 +169,5 @@
 
   - **PowerPoint**: Locanted on the presentation folder
   - **Tableau**: [Games Study Dashboard](https://public.tableau.com/views/Games_tableau/Games?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)  
-  - **Streamlit**: [Games Study Webpage]()
+  - **Streamlit**: Need to run the code that is found in the `src` file named `app.py`.
   
